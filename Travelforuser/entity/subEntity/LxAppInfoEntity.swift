@@ -32,7 +32,7 @@ class LxAppInfoEntity: LxbaseEntity {
     }
     
     override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> AppInfoEntity{
-        var entity = NSEntityDescription.insertNewObjectForEntityForName("AppInfoEntity", inManagedObjectContext:context) as AppInfoEntity
+        var entity:AppInfoEntity = NSEntityDescription.insertNewObjectForEntityForName("AppInfoEntity", inManagedObjectContext:context) as AppInfoEntity
 
 //        entity.setValue(self.name, forKey:"name")
 //        entity.setValue(self.version, forKey:"version")

@@ -62,7 +62,7 @@ class LxUserInfoEntity: LxbaseEntity {
     }
     
     override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> UserInfoEntity{
-        var entity = NSEntityDescription.insertNewObjectForEntityForName("UserInfoEntity", inManagedObjectContext:context) as UserInfoEntity
+        var entity:UserInfoEntity = NSEntityDescription.insertNewObjectForEntityForName("UserInfoEntity", inManagedObjectContext:context) as UserInfoEntity
         
 
         return entity;
