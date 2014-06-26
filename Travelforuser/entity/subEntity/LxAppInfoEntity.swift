@@ -10,39 +10,43 @@ import CoreData
 
 class LxAppInfoEntity: LxbaseEntity {
     
-    @NSManaged var name:String;
-    @NSManaged var version:String;
+    var name:String = "";
+    var version:String = "";
     
     init() {
         super.init()
-        self.name = ""
-        self.version = ""
-        
     }
     
-    override func setEntity(mobj:NSManagedObject) -> Bool{
-        var result:Bool = super.setEntity(mobj)
+    override func setEntity(baseEntity:BaseEntity) -> Bool {
+        var result:Bool = super.setEntity(baseEntity)
         if false == result {
             return false;
         }
 
+        var mobj = baseEntity as AppInfoEntity
+        
         self.name = mobj.valueForKey("name") as String
         self.version = mobj.valueForKey("version") as String
-        
-        self.isEmpty = false
+
         return true;
+    }
+    
+    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> AppInfoEntity{
+        var entity = NSEntityDescription.insertNewObjectForEntityForName("AppInfoEntity", inManagedObjectContext:context) as AppInfoEntity
+
+//        entity.setValue(self.name, forKey:"name")
+//        entity.setValue(self.version, forKey:"version")
+        entity.name = self.name
+        entity.version = self.version
+        
+        return entity;
     }
     
     override func copyEntity(lxbaseEntity:LxbaseEntity) {
         super.copyEntity(lxbaseEntity)
+        
         var lxAppInfoEntity:LxAppInfoEntity = lxbaseEntity as LxAppInfoEntity
         self.name = lxAppInfoEntity.name
         self.version = lxAppInfoEntity.version
-    }
-    
-    deinit {
-        self.isEmpty = true
-        self.name = ""
-        self.version = ""
     }
 }

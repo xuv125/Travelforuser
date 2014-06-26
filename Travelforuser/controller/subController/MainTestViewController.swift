@@ -1,16 +1,15 @@
 //
-//  LxbaseViewController.swift
+//  MainTestViewController.swift
 //  Travelforuser
 //
-//  Created by 倫星 on 2014/06/25.
+//  Created by 倫星 on 2014/06/26.
 //  Copyright (c) 2014年 倫星. All rights reserved.
 //
 
 import UIKit
-import MessageUi
 
-class LxbaseViewController: UIViewController,MFMailComposeViewControllerDelegate, UIAlertViewDelegate {
-
+class MainTestViewController: LxbaseViewController {
+    
 //    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
 //        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 //        // Custom initialization
@@ -37,5 +36,13 @@ class LxbaseViewController: UIViewController,MFMailComposeViewControllerDelegate
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func bSave() {
+        
+    }
+    
+    @IBAction func bLoad() {
+        
+    }
 
 }

@@ -8,19 +8,23 @@
 
 import CoreData
 
-class LxbaseEntity: NSManagedObject {
+class LxbaseEntity: NSObject {
     var isEmpty: Bool = true
     
     init() {
         self.isEmpty = true
     }
     
-    func setEntity(mobj:NSManagedObject) -> Bool{
-        if nil == mobj {
+    func setEntity(baseEntity:BaseEntity) -> Bool {
+        if nil == baseEntity {
             return false;
         }
         self.isEmpty = false
         return true;
+    }
+    
+    func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> BaseEntity{
+        return BaseEntity();
     }
     
     func copyEntity(lxbaseEntity:LxbaseEntity) {

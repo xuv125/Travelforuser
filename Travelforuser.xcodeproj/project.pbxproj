@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2DF6B4195BAE05001269D8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2DF6B3195BAE05001269D8 /* Storyboard.storyboard */; };
+		FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DF6B9195BB030001269D8 /* MainTestViewController.swift */; };
 		FA460D18195AC9B6004F9C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA460D17195AC9B6004F9C2A /* AppDelegate.swift */; };
 		FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA460D19195AC9B6004F9C2A /* Travelforuser.xcdatamodeld */; };
 		FA460D1D195AC9B6004F9C2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA460D1C195AC9B6004F9C2A /* Images.xcassets */; };
@@ -39,6 +41,9 @@
 		FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */; };
 		FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D8B195AD140004F9C2A /* InfoPlist.strings */; };
 		FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D90195AD175004F9C2A /* Localizable.strings */; };
+		FAF2CE21195C0A9B00634722 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE20195C0A9B00634722 /* BaseEntity.swift */; };
+		FAF2CE24195C0C5200634722 /* AppInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */; };
+		FAF2CE25195C0C5200634722 /* UserInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA2DF6B3195BAE05001269D8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		FA2DF6B9195BB030001269D8 /* MainTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTestViewController.swift; path = controller/subController/MainTestViewController.swift; sourceTree = "<group>"; };
 		FA460D12195AC9B6004F9C2A /* Travelforuser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelforuser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA460D16195AC9B6004F9C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA460D17195AC9B6004F9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +119,9 @@
 		FA460D92195AD1A5004F9C2A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA460D93195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FA460D94195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FAF2CE20195C0A9B00634722 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEntity.swift; path = models/baseModel/BaseEntity.swift; sourceTree = "<group>"; };
+		FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfoEntity.swift; path = models/subModel/AppInfoEntity.swift; sourceTree = "<group>"; };
+		FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoEntity.swift; path = models/subModel/UserInfoEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,7 @@
 		FA460D14195AC9B6004F9C2A /* Travelforuser */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2CE14195C09BC00634722 /* models */,
 				FA460D4F195ACBA9004F9C2A /* Networks */,
 				FA460D4E195ACB9E004F9C2A /* view */,
 				FA460D4B195ACB7C004F9C2A /* extension */,
@@ -164,6 +175,7 @@
 				FA460D1C195AC9B6004F9C2A /* Images.xcassets */,
 				FA460D19195AC9B6004F9C2A /* Travelforuser.xcdatamodeld */,
 				FA460D15195AC9B6004F9C2A /* Supporting Files */,
+				FA2DF6B3195BAE05001269D8 /* Storyboard.storyboard */,
 			);
 			path = Travelforuser;
 			sourceTree = "<group>";
@@ -225,6 +237,7 @@
 		FA460D3A195ACAF1004F9C2A /* subController */ = {
 			isa = PBXGroup;
 			children = (
+				FA2DF6B9195BB030001269D8 /* MainTestViewController.swift */,
 			);
 			name = subController;
 			sourceTree = "<group>";
@@ -338,6 +351,32 @@
 			name = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		FAF2CE14195C09BC00634722 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2CE16195C09D800634722 /* baseModel */,
+				FAF2CE15195C09CC00634722 /* subModel */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		FAF2CE15195C09CC00634722 /* subModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */,
+				FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */,
+			);
+			name = subModel;
+			sourceTree = "<group>";
+		};
+		FAF2CE16195C09D800634722 /* baseModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2CE20195C0A9B00634722 /* BaseEntity.swift */,
+			);
+			name = baseModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA460D1D195AC9B6004F9C2A /* Images.xcassets in Resources */,
+				FA2DF6B4195BAE05001269D8 /* Storyboard.storyboard in Resources */,
 				FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */,
 				FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */,
 			);
@@ -440,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA460D65195ACBDC004F9C2A /* AFHTTPRequestOperation.m in Sources */,
+				FAF2CE21195C0A9B00634722 /* BaseEntity.swift in Sources */,
 				FA460D40195ACB33004F9C2A /* CoreDataHelper.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
@@ -452,13 +493,16 @@
 				FA460D3C195ACB01004F9C2A /* LxbaseViewController.swift in Sources */,
 				FA460D83195ACBF0004F9C2A /* UIImageView+AFNetworking.m in Sources */,
 				FA460D84195ACBF0004F9C2A /* UIProgressView+AFNetworking.m in Sources */,
+				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,
 				FA460D6B195ACBDC004F9C2A /* AFURLRequestSerialization.m in Sources */,
 				FA460D6A195ACBDC004F9C2A /* AFURLConnectionOperation.m in Sources */,
 				FA460D82195ACBF0004F9C2A /* UIButton+AFNetworking.m in Sources */,
 				FA460D80195ACBF0004F9C2A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				FAF2CE24195C0C5200634722 /* AppInfoEntity.swift in Sources */,
 				FA460D66195ACBDC004F9C2A /* AFHTTPRequestOperationManager.m in Sources */,
+				FAF2CE25195C0C5200634722 /* UserInfoEntity.swift in Sources */,
 				FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */,
 				FA460D49195ACB69004F9C2A /* LxAppInfoEntity.swift in Sources */,
 				FA460D69195ACBDC004F9C2A /* AFSecurityPolicy.m in Sources */,
@@ -672,6 +716,7 @@
 				FA460D2E195AC9B6004F9C2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA460D2F195AC9B6004F9C2A /* Build configuration list for PBXNativeTarget "TravelforuserTests" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +725,7 @@
 				FA460D31195AC9B6004F9C2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

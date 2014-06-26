@@ -21,8 +21,8 @@ class LxDBAccessor : NSObject {
     }
 
     /* 单例模式 */
-    class var sharedInstance : LxAPPContainer {
-        return LxAPPContainerSharedInstance
+    class var sharedInstance : LxDBAccessor {
+        return LxDBAccessorSharedInstance
     }
     
     /* entity是否为空判断 */
@@ -86,15 +86,20 @@ class LxDBAccessor : NSObject {
     // #pragma mark - DB 操作方法定义
     /* 获取app信息 */
     func getAppInfo () -> LxAppInfoEntity {
-        var request = NSFetchRequest(entityName:"LxAppInfoEntity")
+        var request = NSFetchRequest(entityName:"AppInfoEntity")
         request.returnsObjectsAsFaults = false
 //        request.predicate = NSPredicate(format:"username = %@", "")
         
-        var results = self.managedObjectContext.executeFetchRequest(request, error:nil)
-        
         var lxAppInfoEntity:LxAppInfoEntity = LxAppInfoEntity()
+        var err:NSError? = nil
+        var results = self.managedObjectContext.executeFetchRequest(request, error:&err)
+        if err {
+            println("Error LxDBAccessor::getAppInfo:->\(err)")
+            return lxAppInfoEntity;
+        }
+
         if results.count > 0 {
-            var res = results[0] as NSManagedObject
+            var res = results[0] as AppInfoEntity
             lxAppInfoEntity.setEntity(res)
             lxAppInfoEntity.isEmpty = false
         }
@@ -103,13 +108,12 @@ class LxDBAccessor : NSObject {
 
     /* 设置app信息 */
     func setAppInfo (lxAppInfoEntity:LxAppInfoEntity) -> Bool {
-        var result:Bool = self.truncateEntity("LxAppInfoEntity")
+        var result:Bool = self.truncateEntity("AppInfoEntity")
         if false == result {
             return false
         }
         
-        var entity = NSEntityDescription.insertNewObjectForEntityForName("LxAppInfoEntity", inManagedObjectContext:self.managedObjectContext) as LxAppInfoEntity
-        entity.copyEntity(lxAppInfoEntity)
+        var entity = lxAppInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
         
         var err:NSError? = nil
         self.managedObjectContext.save(&err)
@@ -122,7 +126,7 @@ class LxDBAccessor : NSObject {
     
     /* 获取用户信息 */
     func getUserInfo () -> LxUserInfoEntity {
-        var request = NSFetchRequest(entityName:"LxUserInfoEntity")
+        var request = NSFetchRequest(entityName:"UserInfoEntity")
         request.returnsObjectsAsFaults = false
         
         var lxUserInfoEntity:LxUserInfoEntity = LxUserInfoEntity()
@@ -130,12 +134,12 @@ class LxDBAccessor : NSObject {
         var err:NSError? = nil
         var results = self.managedObjectContext.executeFetchRequest(request, error:&err)
         if err {
-            println("Error LxDBAccessor::setAppInfo:->\(err)")
+            println("Error LxDBAccessor::getUserInfo:->\(err)")
             return lxUserInfoEntity;
         }
         
         if results.count > 0 {
-            var res = results[0] as NSManagedObject
+            var res = results[0] as UserInfoEntity
             lxUserInfoEntity.setEntity(res)
             lxUserInfoEntity.isEmpty = false
         }
@@ -155,7 +159,7 @@ class LxDBAccessor : NSObject {
         var err:NSError? = nil
         self.managedObjectContext.save(&err)
         if err {
-            println("Error LxDBAccessor::setAppInfo:->\(err)")
+            println("Error LxDBAccessor::setUserInfo:->\(err)")
             return false
         }
         return true

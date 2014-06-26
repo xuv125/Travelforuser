@@ -9,9 +9,9 @@
 import UIKit
 
 //-------------------沙盒路径定义-------------------------
+let PROJECT_NAME:String = NSBundle.mainBundle().infoDictionary["CFBundleName"] as String
 let DOCUMENTS_FOLDER = NSHomeDirectory().stringByAppendingString("/Documents")
 let DOCUMENTS_COVER = NSHomeDirectory().stringByAppendingString("/Documents/Cover")
-let DOCUMENTS_DB = NSHomeDirectory().stringByAppendingString("/Documents/DB")
 //-------------------沙盒路径定义-------------------------
 
 //-------------------获取设备大小-------------------------
@@ -23,7 +23,8 @@ let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 //-------------------获取设备大小-------------------------
 
 //DB 文件名定义
-let DBFileName = "db.db3"
+let storeName = PROJECT_NAME
+let storeFilename = storeName + ".sqlite"
 
 //Web 根地址定义
 let WebRoot = "http://www.luodansc.com/"

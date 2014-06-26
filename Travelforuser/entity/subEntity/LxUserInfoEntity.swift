@@ -10,50 +10,35 @@ import CoreData
 
 class LxUserInfoEntity: LxbaseEntity {
     
-    @NSManaged var account_id:String
-    @NSManaged var create_time:String
-    @NSManaged var email:String
-    @NSManaged var golden_coin:Int
-    @NSManaged var last_login_time:String
-    @NSManaged var login_count:Int
-    @NSManaged var login_time:String
-    @NSManaged var name_en:String
-    @NSManaged var name_kanji:String
-    @NSManaged var name_katakana:String
-    @NSManaged var password:String
-    @NSManaged var shop_id:String
-    @NSManaged var silver_coin:Int
-    @NSManaged var status:Int
-    @NSManaged var tel:String
-    @NSManaged var update_time:String
-    @NSManaged var user_id:String
+    var account_id:String = ""
+    var create_time:String = ""
+    var email:String = ""
+    var golden_coin:Int = 0
+    var last_login_time:String = ""
+    var login_count:Int = 0
+    var login_time:String = ""
+    var name_en:String = ""
+    var name_kanji:String = ""
+    var name_katakana:String = ""
+    var password:String = ""
+    var shop_id:String = ""
+    var silver_coin:Int = 0
+    var status:Int = 0
+    var tel:String = ""
+    var update_time:String = ""
+    var user_id:String = ""
     
     init() {
         super.init()
-        self.account_id = ""
-        self.create_time = ""
-        self.email = ""
-        self.golden_coin = 0
-        self.last_login_time = ""
-        self.login_count = 0
-        self.login_time = ""
-        self.name_en = ""
-        self.name_kanji = ""
-        self.name_katakana = ""
-        self.password = ""
-        self.shop_id = ""
-        self.silver_coin = 0
-        self.status = 0
-        self.tel = ""
-        self.update_time = ""
-        self.user_id = ""
     }
     
-    override func setEntity(mobj:NSManagedObject) -> Bool{
-        var result:Bool = super.setEntity(mobj)
+    override func setEntity(baseEntity:BaseEntity) -> Bool{
+        var result:Bool = super.setEntity(baseEntity)
         if false == result {
             return false;
         }
+        
+        var mobj = baseEntity as UserInfoEntity
         
         self.account_id = mobj.valueForKey("name") as String
         self.create_time = mobj.valueForKey("name") as String
@@ -74,6 +59,13 @@ class LxUserInfoEntity: LxbaseEntity {
         self.user_id = mobj.valueForKey("name") as String
         
         return true;
+    }
+    
+    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> UserInfoEntity{
+        var entity = NSEntityDescription.insertNewObjectForEntityForName("UserInfoEntity", inManagedObjectContext:context) as UserInfoEntity
+        
+
+        return entity;
     }
     
     override func copyEntity(lxbaseEntity:LxbaseEntity) {
@@ -97,25 +89,5 @@ class LxUserInfoEntity: LxbaseEntity {
         self.tel = lxUserInfoEntity.tel
         self.update_time = lxUserInfoEntity.update_time
         self.user_id = lxUserInfoEntity.user_id
-    }
-    
-    deinit {
-        self.account_id = ""
-        self.create_time = ""
-        self.email = ""
-        self.golden_coin = 0
-        self.last_login_time = ""
-        self.login_count = 0
-        self.login_time = ""
-        self.name_en = ""
-        self.name_kanji = ""
-        self.name_katakana = ""
-        self.password = ""
-        self.shop_id = ""
-        self.silver_coin = 0
-        self.status = 0
-        self.tel = ""
-        self.update_time = ""
-        self.user_id = ""
     }
 }

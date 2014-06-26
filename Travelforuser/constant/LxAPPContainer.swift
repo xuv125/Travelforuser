@@ -61,12 +61,12 @@ class LxAPPContainer : NSObject {
                 //Todo 用户自动登录认证
             }
         }
-        
+
         var version:String = NSBundle.mainBundle().infoDictionary["CFBundleVersion"] as String
         
         //与当前版本号不同
         if version != self.lxAppInfoEntity.version {
-            lxAppInfoEntity.name = NSBundle.mainBundle().infoDictionary["CFBundleDisplayName"] as String
+            lxAppInfoEntity.name = PROJECT_NAME
             lxAppInfoEntity.version = version
             
             self.setAppInfoEntity(lxAppInfoEntity)

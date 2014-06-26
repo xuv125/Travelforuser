@@ -10,9 +10,6 @@ import CoreData
 
 class CoreDataHelper {
     
-    let storeName = "travelforuser"
-    let storeFilename = "travelforuser.sqlite"
-    
     // #pragma mark - Core Data stack
     
     // Returns the managed object context for the application.
@@ -33,7 +30,7 @@ class CoreDataHelper {
     // If the model doesn't already exist, it is created from the application's model.
     var managedObjectModel: NSManagedObjectModel {
     if !_managedObjectModel {
-        let modelURL = NSBundle.mainBundle().URLForResource(self.storeName, withExtension: "momd")
+        let modelURL = NSBundle.mainBundle().URLForResource(storeName, withExtension: "momd")
         _managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)
         }
         return _managedObjectModel!
@@ -44,7 +41,9 @@ class CoreDataHelper {
     // If the coordinator doesn't already exist, it is created and the application's store added to it.
     var persistentStoreCoordinator: NSPersistentStoreCoordinator {
     if !_persistentStoreCoordinator {
-        let storeURL = self.applicationDocumentsDirectory.URLByAppendingPathComponent(self.storeFilename)
+        println(storeFilename)
+        let storeURL = self.applicationDocumentsDirectory.URLByAppendingPathComponent(storeFilename)
+        println(storeURL)
         var error: NSError? = nil
         _persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         if _persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: &error) == nil {
@@ -71,7 +70,7 @@ class CoreDataHelper {
             Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
             
             */
-            //println("Unresolved error \(error), \(error.userInfo)")
+            println("Unresolved error \(error), \(error)")
             abort()
         }
         }
