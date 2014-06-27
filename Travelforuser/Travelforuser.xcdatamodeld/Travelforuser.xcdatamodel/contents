@@ -9,15 +9,21 @@
         <attribute name="create_time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="golden_coin" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="golden_coin_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="last_login_time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="login_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="login_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name_en" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name_kanji" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name_katakana" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_en_family" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_en_last" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_en_middle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_kanji_mei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_kanji_sei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_katakana_mei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_katakana_sei" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shop_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="silver_coin" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="silver_coin_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="update_time" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,6 +31,6 @@
     </entity>
     <elements>
         <element name="AppInfoEntity" positionX="-236" positionY="-1" width="128" height="73"/>
-        <element name="UserInfoEntity" positionX="-54" positionY="9" width="128" height="298"/>
+        <element name="UserInfoEntity" positionX="-54" positionY="9" width="128" height="390"/>
     </elements>
 </model>

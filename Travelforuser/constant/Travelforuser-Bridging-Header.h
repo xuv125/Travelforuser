@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 倫星. All rights reserved.
 //
 
+#import "AFNetworking.h"
 #import "AFNetworkReachabilityManager.h"
 //#import "BaseEntity.h"
 //#import "AppInfoEntity.h"
