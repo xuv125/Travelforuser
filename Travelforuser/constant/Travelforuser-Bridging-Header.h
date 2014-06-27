@@ -7,3 +7,6 @@
 //
 
 #import "AFNetworkReachabilityManager.h"
+//#import "BaseEntity.h"
+//#import "AppInfoEntity.h"
+//#import "UserInfoEntity.h"

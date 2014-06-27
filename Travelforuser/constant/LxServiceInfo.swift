@@ -22,9 +22,16 @@ let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 //-------------------获取设备大小-------------------------
 
-//DB 文件名定义
+//工程名定义
 let storeName = PROJECT_NAME
+//数据文件物理名名定义
 let storeFilename = storeName + ".sqlite"
+
+//shared instance定义
+//共通逻辑处理:网络有无，app初期化，app信息和用户信息持久化保存
+let LxAPPContainerSharedInstance:LxAPPContainer = LxAPPContainer()
+//数据操作封装处理
+let LxDBAccessorSharedInstance:LxDBAccessor = LxDBAccessor()
 
 //Web 根地址定义
 let WebRoot = "http://www.luodansc.com/"

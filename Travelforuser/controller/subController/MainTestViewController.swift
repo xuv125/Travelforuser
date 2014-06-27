@@ -14,6 +14,9 @@ class MainTestViewController: LxbaseViewController {
 //        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 //        // Custom initialization
 //    }
+    
+    @IBOutlet var txtAppName:UITextField!
+    @IBOutlet var txtAppVersion:UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +41,19 @@ class MainTestViewController: LxbaseViewController {
     */
     
     @IBAction func bSave() {
+        var lxAppInfoEntity:LxAppInfoEntity = LxAppInfoEntity()
         
+        lxAppInfoEntity.name = "" + txtAppName.text
+        lxAppInfoEntity.version = "" + txtAppVersion.text
+        
+        LxDBAccessorSharedInstance.setAppInfo(lxAppInfoEntity)
     }
     
     @IBAction func bLoad() {
+        var lxAppInfoEntity:LxAppInfoEntity = LxDBAccessorSharedInstance.getAppInfo()
         
+        txtAppName.text = lxAppInfoEntity.name
+        txtAppVersion.text = lxAppInfoEntity.version
     }
 
 }

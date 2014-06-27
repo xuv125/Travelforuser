@@ -41,9 +41,6 @@
 		FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */; };
 		FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D8B195AD140004F9C2A /* InfoPlist.strings */; };
 		FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D90195AD175004F9C2A /* Localizable.strings */; };
-		FAF2CE21195C0A9B00634722 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE20195C0A9B00634722 /* BaseEntity.swift */; };
-		FAF2CE24195C0C5200634722 /* AppInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */; };
-		FAF2CE25195C0C5200634722 /* UserInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,9 +116,6 @@
 		FA460D92195AD1A5004F9C2A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA460D93195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FA460D94195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		FAF2CE20195C0A9B00634722 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEntity.swift; path = models/baseModel/BaseEntity.swift; sourceTree = "<group>"; };
-		FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfoEntity.swift; path = models/subModel/AppInfoEntity.swift; sourceTree = "<group>"; };
-		FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoEntity.swift; path = models/subModel/UserInfoEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,8 +357,6 @@
 		FAF2CE15195C09CC00634722 /* subModel */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2CE22195C0C5200634722 /* AppInfoEntity.swift */,
-				FAF2CE23195C0C5200634722 /* UserInfoEntity.swift */,
 			);
 			name = subModel;
 			sourceTree = "<group>";
@@ -372,7 +364,6 @@
 		FAF2CE16195C09D800634722 /* baseModel */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2CE20195C0A9B00634722 /* BaseEntity.swift */,
 			);
 			name = baseModel;
 			sourceTree = "<group>";
@@ -480,7 +471,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA460D65195ACBDC004F9C2A /* AFHTTPRequestOperation.m in Sources */,
-				FAF2CE21195C0A9B00634722 /* BaseEntity.swift in Sources */,
 				FA460D40195ACB33004F9C2A /* CoreDataHelper.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
@@ -500,9 +490,7 @@
 				FA460D6A195ACBDC004F9C2A /* AFURLConnectionOperation.m in Sources */,
 				FA460D82195ACBF0004F9C2A /* UIButton+AFNetworking.m in Sources */,
 				FA460D80195ACBF0004F9C2A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				FAF2CE24195C0C5200634722 /* AppInfoEntity.swift in Sources */,
 				FA460D66195ACBDC004F9C2A /* AFHTTPRequestOperationManager.m in Sources */,
-				FAF2CE25195C0C5200634722 /* UserInfoEntity.swift in Sources */,
 				FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */,
 				FA460D49195ACB69004F9C2A /* LxAppInfoEntity.swift in Sources */,
 				FA460D69195ACBDC004F9C2A /* AFSecurityPolicy.m in Sources */,
@@ -644,6 +632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/constant/Travelforuser-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -658,6 +647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/constant/Travelforuser-Bridging-Header.h";
 			};
 			name = Release;
 		};

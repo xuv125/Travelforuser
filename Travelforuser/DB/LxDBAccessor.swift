@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 
-let LxDBAccessorSharedInstance:LxDBAccessor = LxDBAccessor()
-
 class LxDBAccessor : NSObject {
     
     var managedObjectContext:NSManagedObjectContext
@@ -19,6 +17,20 @@ class LxDBAccessor : NSObject {
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         self.managedObjectContext = appDel.cdh.managedObjectContext
     }
+
+//    class func shareInstance() -> LxDBAccessor{
+//        
+//        struct YRLxDBAccessor {
+//            static var predicate:dispatch_once_t = 0
+//            static var instance:LxDBAccessor? = nil
+//        }
+//        
+//        dispatch_once(&YRLxDBAccessor.predicate,{
+//                YRLxDBAccessor.instance=LxDBAccessor()
+//            }
+//        )
+//        return YRLxDBAccessor.instance!
+//    }
 
     /* 单例模式 */
     class var sharedInstance : LxDBAccessor {
@@ -99,7 +111,7 @@ class LxDBAccessor : NSObject {
         }
 
         if results.count > 0 {
-            var res = results[0] as AppInfoEntity
+            var res = results[0]  as NSManagedObject
             lxAppInfoEntity.setEntity(res)
             lxAppInfoEntity.isEmpty = false
         }
@@ -113,7 +125,7 @@ class LxDBAccessor : NSObject {
             return false
         }
         
-        var entity = lxAppInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
+        var entity:NSManagedObject = lxAppInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
         
         var err:NSError? = nil
         self.managedObjectContext.save(&err)
@@ -139,7 +151,7 @@ class LxDBAccessor : NSObject {
         }
         
         if results.count > 0 {
-            var res = results[0] as UserInfoEntity
+            var res = results[0] as NSManagedObject
             lxUserInfoEntity.setEntity(res)
             lxUserInfoEntity.isEmpty = false
         }
@@ -148,13 +160,12 @@ class LxDBAccessor : NSObject {
     
     /* 设置用户信息 */
     func setUserInfo (lxUserInfoEntity:LxUserInfoEntity) -> Bool {
-        var result:Bool = self.truncateEntity("LxUserInfoEntity")
+        var result:Bool = self.truncateEntity("UserInfoEntity")
         if false == result {
             return false
         }
         
-        var entity = NSEntityDescription.insertNewObjectForEntityForName("LxUserInfoEntity", inManagedObjectContext:self.managedObjectContext) as LxUserInfoEntity
-        entity.copyEntity(lxUserInfoEntity)
+        var entity:NSManagedObject = lxUserInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
         
         var err:NSError? = nil
         self.managedObjectContext.save(&err)

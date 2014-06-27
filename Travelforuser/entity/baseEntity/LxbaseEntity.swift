@@ -15,16 +15,16 @@ class LxbaseEntity: NSObject {
         self.isEmpty = true
     }
     
-    func setEntity(baseEntity:BaseEntity) -> Bool {
-        if nil == baseEntity {
+    func setEntity(mobj:NSManagedObject) -> Bool {
+        if nil == mobj {
             return false;
         }
         self.isEmpty = false
         return true;
     }
     
-    func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> BaseEntity{
-        return BaseEntity();
+    func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
+        return NSManagedObject();
     }
     
     func copyEntity(lxbaseEntity:LxbaseEntity) {

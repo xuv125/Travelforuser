@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="633-UH-vsS">
-                                <rect key="frame" x="44" y="90" width="46" height="30"/>
+                                <rect key="frame" x="31" y="258" width="46" height="30"/>
                                 <state key="normal" title="save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-Xm-F3y">
-                                <rect key="frame" x="207" y="90" width="46" height="30"/>
+                                <rect key="frame" x="208" y="258" width="46" height="30"/>
                                 <state key="normal" title="load">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,9 +34,23 @@
                                     <action selector="bLoad" destination="cAL-Zo-KLS" eventType="touchUpInside" id="Jj3-uP-mXd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="app version" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-2d-Jsf">
+                                <rect key="frame" x="20" y="154" width="261" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="app name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EM0-RD-lTH">
+                                <rect key="frame" x="20" y="90" width="261" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtAppName" destination="EM0-RD-lTH" id="rK3-wo-Sms"/>
+                        <outlet property="txtAppVersion" destination="ze4-2d-Jsf" id="XIo-f9-cc9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFX-ZT-AEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

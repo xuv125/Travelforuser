@@ -17,13 +17,11 @@ class LxAppInfoEntity: LxbaseEntity {
         super.init()
     }
     
-    override func setEntity(baseEntity:BaseEntity) -> Bool {
-        var result:Bool = super.setEntity(baseEntity)
+    override func setEntity(mobj:NSManagedObject) -> Bool {
+        var result:Bool = super.setEntity(mobj)
         if false == result {
             return false;
         }
-
-        var mobj = baseEntity as AppInfoEntity
         
         self.name = mobj.valueForKey("name") as String
         self.version = mobj.valueForKey("version") as String
@@ -31,13 +29,11 @@ class LxAppInfoEntity: LxbaseEntity {
         return true;
     }
     
-    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> AppInfoEntity{
-        var entity:AppInfoEntity = NSEntityDescription.insertNewObjectForEntityForName("AppInfoEntity", inManagedObjectContext:context) as AppInfoEntity
+    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
+        var entity:NSManagedObject = NSEntityDescription.insertNewObjectForEntityForName("AppInfoEntity", inManagedObjectContext:context) as NSManagedObject
 
-//        entity.setValue(self.name, forKey:"name")
-//        entity.setValue(self.version, forKey:"version")
-        entity.name = self.name
-        entity.version = self.version
+        entity.setValue(self.name, forKey:"name")
+        entity.setValue(self.version, forKey:"version")
         
         return entity;
     }

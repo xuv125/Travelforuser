@@ -8,8 +8,6 @@
 
 import Foundation
 
-let LxAPPContainerSharedInstance:LxAPPContainer = LxAPPContainer()
-
 class LxAPPContainer : NSObject {
     var lxAppInfoEntity:LxAppInfoEntity
     var lxUserInfoEntity:LxUserInfoEntity
@@ -47,6 +45,7 @@ class LxAPPContainer : NSObject {
     
     /* app初期化 */
     func appInit() {
+//        var lxDBAccessorSharedInstance = LxDBAccessor.shareInstance()
         var lxAppInfoEntity:LxAppInfoEntity = LxDBAccessorSharedInstance.getAppInfo()
         var lxUserInfoEntity:LxUserInfoEntity = LxDBAccessorSharedInstance.getUserInfo()
         

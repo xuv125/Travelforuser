@@ -32,13 +32,11 @@ class LxUserInfoEntity: LxbaseEntity {
         super.init()
     }
     
-    override func setEntity(baseEntity:BaseEntity) -> Bool{
-        var result:Bool = super.setEntity(baseEntity)
+    override func setEntity(mobj:NSManagedObject) -> Bool{
+        var result:Bool = super.setEntity(mobj)
         if false == result {
             return false;
         }
-        
-        var mobj = baseEntity as UserInfoEntity
         
         self.account_id = mobj.valueForKey("name") as String
         self.create_time = mobj.valueForKey("name") as String
@@ -61,9 +59,26 @@ class LxUserInfoEntity: LxbaseEntity {
         return true;
     }
     
-    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> UserInfoEntity{
-        var entity:UserInfoEntity = NSEntityDescription.insertNewObjectForEntityForName("UserInfoEntity", inManagedObjectContext:context) as UserInfoEntity
-        
+    override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
+        var entity:NSManagedObject = NSEntityDescription.insertNewObjectForEntityForName("UserInfoEntity", inManagedObjectContext:context) as NSManagedObject
+
+        entity.setValue(self.account_id, forKey:"account_id")
+        entity.setValue(self.create_time, forKey:"create_time")
+        entity.setValue(self.email, forKey:"email")
+        entity.setValue(self.golden_coin, forKey:"golden_coin")
+        entity.setValue(self.last_login_time, forKey:"last_login_time")
+        entity.setValue(self.login_count, forKey:"login_count")
+        entity.setValue(self.login_time, forKey:"login_time")
+        entity.setValue(self.name_en, forKey:"name_en")
+        entity.setValue(self.name_kanji, forKey:"name_kanji")
+        entity.setValue(self.name_katakana, forKey:"name_katakana")
+        entity.setValue(self.password, forKey:"password")
+        entity.setValue(self.shop_id, forKey:"shop_id")
+        entity.setValue(self.silver_coin, forKey:"silver_coin")
+        entity.setValue(self.status, forKey:"status")
+        entity.setValue(self.tel, forKey:"tel")
+        entity.setValue(self.update_time, forKey:"update_time")
+        entity.setValue(self.user_id, forKey:"user_id")
 
         return entity;
     }
