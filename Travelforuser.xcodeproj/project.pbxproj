@@ -41,6 +41,7 @@
 		FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */; };
 		FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D8B195AD140004F9C2A /* InfoPlist.strings */; };
 		FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D90195AD175004F9C2A /* Localizable.strings */; };
+		FA61D9F81962F19300D1D959 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61D9F71962F19300D1D959 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		FA460D92195AD1A5004F9C2A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA460D93195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FA460D94195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA61D9F61962F19300D1D959 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = "Networks/JSONKit-NoWarning/JSONKit.h"; sourceTree = "<group>"; };
+		FA61D9F71962F19300D1D959 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = "Networks/JSONKit-NoWarning/JSONKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +296,7 @@
 			children = (
 				FA460D50195ACBB7004F9C2A /* AFNetworking */,
 				FA460D51195ACBC2004F9C2A /* UIKit+AFNetworking */,
+				FA61D9F51962F12B00D1D959 /* JSONKit-NoWarning */,
 			);
 			name = Networks;
 			sourceTree = "<group>";
@@ -345,6 +349,15 @@
 				FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */,
 			);
 			name = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		FA61D9F51962F12B00D1D959 /* JSONKit-NoWarning */ = {
+			isa = PBXGroup;
+			children = (
+				FA61D9F61962F19300D1D959 /* JSONKit.h */,
+				FA61D9F71962F19300D1D959 /* JSONKit.m */,
+			);
+			name = "JSONKit-NoWarning";
 			sourceTree = "<group>";
 		};
 		FAF2CE14195C09BC00634722 /* models */ = {
@@ -486,6 +499,7 @@
 				FA460D83195ACBF0004F9C2A /* UIImageView+AFNetworking.m in Sources */,
 				FA460D84195ACBF0004F9C2A /* UIProgressView+AFNetworking.m in Sources */,
 				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
+				FA61D9F81962F19300D1D959 /* JSONKit.m in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,
 				FA460D6B195ACBDC004F9C2A /* AFURLRequestSerialization.m in Sources */,

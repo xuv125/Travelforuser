@@ -60,6 +60,13 @@ class MainTestViewController: LxbaseViewController {
     }
     
     @IBAction func bLogin() {
+//        var lxUserInfoEntity1:LxUserInfoEntity = LxDBAccessorSharedInstance.getUserInfo()
+//        
+//        println("################################")
+//        println(lxUserInfoEntity1.toString())
+//        println("################################")
+//        
+        
         let manager = AFHTTPRequestOperationManager()
 
         let paras :Dictionary = [
@@ -102,7 +109,7 @@ class MainTestViewController: LxbaseViewController {
                 
                 println(lxUserInfoEntity.toString())
                 
-//                LxDBAccessorSharedInstance.setUserInfo(lxUserInfoEntity)
+                LxDBAccessorSharedInstance.setUserInfo(lxUserInfoEntity)
                 
             }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                 println("error: \(error)")
