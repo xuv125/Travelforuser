@@ -34,8 +34,8 @@ let LxAPPContainerSharedInstance:LxAPPContainer = LxAPPContainer()
 let LxDBAccessorSharedInstance:LxDBAccessor = LxDBAccessor()
 
 //Web 根地址定义
-let WebRoot = "http://www.luodansc.com/"
-let ServiceUrl = "http://www.luodansc.com/mobile/"
+let WebRoot = "http://localhost:8080/pirateAllianceWeb/"
+let ServiceUrl = "http://localhost:8080/pirateAllianceWeb/"
 
 //-------------------mail 定义-------------------------
 let to_mail = "XXXXX@qq.com"
@@ -43,10 +43,9 @@ let bcc_mail = "xing_lun@hotmail.com"
 //-------------------mail 定义-------------------------
 
 //-------------------Servlet 定义-------------------------
-let UserRegister = "http://www.luodansc.com/user.php"
-let GetUserInfoServlet = "get_user_info_servlet.php"
-let SetApnsInfoServlet = "set_apns_info_servlet.php"
-let ClearDeviceBadgeServlet = "clear_device_badge_servlet.php"
-let RegisterUserServlet = "register_user_servlet.php"
+let UserRegisterAction = ServiceUrl + "com/userRegister.action"
+let GetUserInfoAction = ServiceUrl + "com/userLogin.action"
+let SetApnsInfoAction = ServiceUrl + "com/setApnsInfo.action"
+let ClearDeviceBadgeAction = ServiceUrl + "com/clear_device_badge_servlet.php"
 //........add
 //-------------------Servlet 定义-------------------------

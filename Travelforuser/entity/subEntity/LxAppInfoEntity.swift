@@ -45,4 +45,12 @@ class LxAppInfoEntity: LxbaseEntity {
         self.name = lxAppInfoEntity.name
         self.version = lxAppInfoEntity.version
     }
+    
+    override func toString() -> String {
+        var str = super.toString()
+        str += "name:" + self.name + "\n"
+        str += "version:" + self.version
+        
+        return str
+    }
 }

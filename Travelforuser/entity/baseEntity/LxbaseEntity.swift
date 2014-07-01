@@ -31,6 +31,12 @@ class LxbaseEntity: NSObject {
         self.isEmpty = lxbaseEntity.isEmpty
     }
     
+    func toString() -> String {
+        var str = ""
+        str += "isEmpty:\(self.isEmpty)" + "\n"
+        return str
+    }
+    
     deinit {
         self.isEmpty = true
     }

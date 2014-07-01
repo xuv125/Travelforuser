@@ -129,4 +129,33 @@ class LxUserInfoEntity: LxbaseEntity {
         self.update_time = lxUserInfoEntity.update_time
         self.user_id = lxUserInfoEntity.user_id
     }
+    
+    override func toString() -> String {
+        var str = super.toString()
+        str += "account_id:" + self.account_id + "\n"
+        str += "create_time:" + self.create_time + "\n"
+        str += "email:" + self.email + "\n"
+        str += "golden_coin_id:" + self.golden_coin_id + "\n"
+        str += "golden_coin:\(self.golden_coin)" + "\n"
+        str += "last_login_time:" + self.last_login_time + "\n"
+        str += "login_count:\(self.login_count)" + "\n"
+        str += "login_time:" + self.login_time + "\n"
+        str += "name_en_family:" + self.name_en_family + "\n"
+        str += "name_en_middle:" + self.name_en_middle + "\n"
+        str += "name_en_last:" + self.name_en_last + "\n"
+        str += "name_kanji_sei:" + self.name_kanji_sei + "\n"
+        str += "name_kanji_mei:" + self.name_kanji_mei + "\n"
+        str += "name_katakana_sei:" + self.name_katakana_sei + "\n"
+        str += "name_katakana_mei:" + self.name_katakana_mei + "\n"
+        str += "password:" + self.password + "\n"
+        str += "shop_id:" + self.shop_id + "\n"
+        str += "silver_coin_id:" + self.silver_coin_id + "\n"
+        str += "silver_coin:\(self.silver_coin)" + "\n"
+        str += "status:\(self.status)" + "\n"
+        str += "tel:" + self.tel + "\n"
+        str += "update_time:" + self.update_time + "\n"
+        str += "user_id:" + self.user_id
+
+        return str
+    }
 }
