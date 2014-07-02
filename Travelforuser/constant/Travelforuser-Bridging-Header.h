@@ -10,6 +10,3 @@
 #import "UIImageView+AFNetworking.h"
 #import "AFNetworkReachabilityManager.h"
 #import "JSONKit.h"
-//#import "BaseEntity.h"
-//#import "AppInfoEntity.h"
-//#import "UserInfoEntity.h"

@@ -140,6 +140,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA221DD01963910400AFC777 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA221DD11963910B00AFC777 /* TapkuLibrary */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FA221DD11963910B00AFC777 /* TapkuLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TapkuLibrary;
+			sourceTree = "<group>";
+		};
 		FA460D09195AC9B6004F9C2A = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +176,7 @@
 		FA460D14195AC9B6004F9C2A /* Travelforuser */ = {
 			isa = PBXGroup;
 			children = (
+				FA221DD01963910400AFC777 /* UI */,
 				FAF2CE14195C09BC00634722 /* models */,
 				FA460D4F195ACBA9004F9C2A /* Networks */,
 				FA460D4E195ACB9E004F9C2A /* view */,
