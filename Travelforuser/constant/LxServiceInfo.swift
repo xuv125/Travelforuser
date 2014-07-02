@@ -32,6 +32,10 @@ let storeFilename = storeName + ".sqlite"
 let LxAPPContainerSharedInstance:LxAPPContainer = LxAPPContainer()
 //数据操作封装处理
 let LxDBAccessorSharedInstance:LxDBAccessor = LxDBAccessor()
+//网络操作封装
+let LxNetHelperSharedInstance:LxNetHelper = LxNetHelper()
+
+let TimeOut:NSTimeInterval = 10.0
 
 //Web 根地址定义
 let WebRoot = "http://localhost:8080/pirateAllianceWeb/"

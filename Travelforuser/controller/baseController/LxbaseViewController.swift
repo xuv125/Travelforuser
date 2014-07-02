@@ -9,12 +9,9 @@
 import UIKit
 import MessageUi
 
-class LxbaseViewController: UIViewController,MFMailComposeViewControllerDelegate, UIAlertViewDelegate {
+class LxbaseViewController: UIViewController,MFMailComposeViewControllerDelegate, MBProgressHUDDelegate, LxNetHelperDelegate {
 
-//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        // Custom initialization
-//    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,5 +34,18 @@ class LxbaseViewController: UIViewController,MFMailComposeViewControllerDelegate
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // #pragma mark - LxNetHelperDelegate
+    func success(responseObject:AnyObject!) {
+        
+    }
+    
+    func failure() {
+        
+    }
+//
+//    func addHUDView(HUD:MBProgressHUD!) {
+//        
+//    }
 
 }
