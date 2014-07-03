@@ -1,15 +1,14 @@
 //
-//  LxbaseViewController.swift
+//  LxbaseSplitViewController.swift
 //  Travelforuser
 //
-//  Created by 倫星 on 2014/06/25.
+//  Created by 倫星 on 2014/07/03.
 //  Copyright (c) 2014年 倫星. All rights reserved.
 //
 
 import UIKit
-import MessageUi
 
-class LxbaseViewController: UIViewController, MFMailComposeViewControllerDelegate, MBProgressHUDDelegate, LxNetHelperDelegate {
+class LxbaseSplitViewController: UISplitViewController, MBProgressHUDDelegate, LxNetHelperDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,7 @@ class LxbaseViewController: UIViewController, MFMailComposeViewControllerDelegat
         // Pass the selected object to the new view controller.
     }
     */
-    
+
     // #pragma mark - LxNetHelperDelegate
     func success(responseObject:AnyObject!) {
         println("LxbaseViewController:success")
@@ -45,7 +44,7 @@ class LxbaseViewController: UIViewController, MFMailComposeViewControllerDelegat
     func showHUD() {
         self.addHUDView("network_conn_failed", imgName:"nosmoke.png")
     }
-
+    
     // #pragma mark - MBProgressHUDDelegate
     func addHUDView(message:String, imgName:String) {
         //自定义view

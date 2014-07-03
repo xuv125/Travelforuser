@@ -71,6 +71,18 @@
 		FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */; };
 		FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D8B195AD140004F9C2A /* InfoPlist.strings */; };
 		FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D90195AD175004F9C2A /* Localizable.strings */; };
+		FA5FD1CE196521A0002D2F40 /* InfoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5FD1CD196521A0002D2F40 /* InfoList.storyboard */; };
+		FA5FD1D0196522B3002D2F40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1CF196522B3002D2F40 /* MainViewController.swift */; };
+		FA5FD1D2196529B5002D2F40 /* LxbaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */; };
+		FA5FD1D419652AD4002D2F40 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1D319652AD4002D2F40 /* MainSplitViewController.swift */; };
+		FA5FD1D619652B2A002D2F40 /* LxbaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1D519652B2A002D2F40 /* LxbaseNavigationController.swift */; };
+		FA5FD1D819652B7F002D2F40 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1D719652B7F002D2F40 /* MainNavigationController.swift */; };
+		FA5FD1DC196540A5002D2F40 /* LxbaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1DB196540A5002D2F40 /* LxbaseTableView.swift */; };
+		FA5FD1DE196540EB002D2F40 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1DD196540EB002D2F40 /* MainTableView.swift */; };
+		FA5FD1E019654147002D2F40 /* LxbaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1DF19654147002D2F40 /* LxbaseView.swift */; };
+		FA5FD1E219654179002D2F40 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E119654179002D2F40 /* MainView.swift */; };
+		FA5FD1E4196541DB002D2F40 /* LxbaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */; };
+		FA5FD1E6196541F8002D2F40 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +190,18 @@
 		FA460D92195AD1A5004F9C2A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA460D93195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FA460D94195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA5FD1CD196521A0002D2F40 /* InfoList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InfoList.storyboard; path = Storyboard/InfoList.storyboard; sourceTree = "<group>"; };
+		FA5FD1CF196522B3002D2F40 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = controller/subController/MainViewController.swift; sourceTree = "<group>"; };
+		FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseSplitViewController.swift; path = controller/baseController/LxbaseSplitViewController.swift; sourceTree = "<group>"; };
+		FA5FD1D319652AD4002D2F40 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSplitViewController.swift; path = controller/subController/MainSplitViewController.swift; sourceTree = "<group>"; };
+		FA5FD1D519652B2A002D2F40 /* LxbaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseNavigationController.swift; path = controller/baseController/LxbaseNavigationController.swift; sourceTree = "<group>"; };
+		FA5FD1D719652B7F002D2F40 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = controller/subController/MainNavigationController.swift; sourceTree = "<group>"; };
+		FA5FD1DB196540A5002D2F40 /* LxbaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableView.swift; path = view/baseView/LxbaseTableView.swift; sourceTree = "<group>"; };
+		FA5FD1DD196540EB002D2F40 /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableView.swift; path = view/subView/MainTableView.swift; sourceTree = "<group>"; };
+		FA5FD1DF19654147002D2F40 /* LxbaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseView.swift; path = view/baseView/LxbaseView.swift; sourceTree = "<group>"; };
+		FA5FD1E119654179002D2F40 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = view/subView/MainView.swift; sourceTree = "<group>"; };
+		FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableViewController.swift; path = controller/baseController/LxbaseTableViewController.swift; sourceTree = "<group>"; };
+		FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = controller/subController/MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +303,7 @@
 		FA460D14195AC9B6004F9C2A /* Travelforuser */ = {
 			isa = PBXGroup;
 			children = (
+				FA5FD1CC1965210A002D2F40 /* Storyboard */,
 				FA221DD01963910400AFC777 /* UI */,
 				FAF2CE14195C09BC00634722 /* models */,
 				FA460D4F195ACBA9004F9C2A /* Networks */,
@@ -349,6 +374,9 @@
 			isa = PBXGroup;
 			children = (
 				FA460D3B195ACB01004F9C2A /* LxbaseViewController.swift */,
+				FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */,
+				FA5FD1D519652B2A002D2F40 /* LxbaseNavigationController.swift */,
+				FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */,
 			);
 			name = baseController;
 			sourceTree = "<group>";
@@ -357,6 +385,10 @@
 			isa = PBXGroup;
 			children = (
 				FA2DF6B9195BB030001269D8 /* MainTestViewController.swift */,
+				FA5FD1CF196522B3002D2F40 /* MainViewController.swift */,
+				FA5FD1D319652AD4002D2F40 /* MainSplitViewController.swift */,
+				FA5FD1D719652B7F002D2F40 /* MainNavigationController.swift */,
+				FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */,
 			);
 			name = subController;
 			sourceTree = "<group>";
@@ -407,6 +439,8 @@
 		FA460D4E195ACB9E004F9C2A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FA5FD1DA1965406D002D2F40 /* baseView */,
+				FA5FD1D919654063002D2F40 /* subView */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -469,6 +503,32 @@
 				FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */,
 			);
 			name = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		FA5FD1CC1965210A002D2F40 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA5FD1CD196521A0002D2F40 /* InfoList.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA5FD1D919654063002D2F40 /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				FA5FD1DD196540EB002D2F40 /* MainTableView.swift */,
+				FA5FD1E119654179002D2F40 /* MainView.swift */,
+			);
+			name = subView;
+			sourceTree = "<group>";
+		};
+		FA5FD1DA1965406D002D2F40 /* baseView */ = {
+			isa = PBXGroup;
+			children = (
+				FA5FD1DB196540A5002D2F40 /* LxbaseTableView.swift */,
+				FA5FD1DF19654147002D2F40 /* LxbaseView.swift */,
+			);
+			name = baseView;
 			sourceTree = "<group>";
 		};
 		FAF2CE14195C09BC00634722 /* models */ = {
@@ -581,6 +641,7 @@
 				FA221EFA1963E00700AFC777 /* arrow-up@2x.png in Resources */,
 				FA460D1D195AC9B6004F9C2A /* Images.xcassets in Resources */,
 				FA221F101963E00700AFC777 /* three@2x.png in Resources */,
+				FA5FD1CE196521A0002D2F40 /* InfoList.storyboard in Resources */,
 				FA221F0B1963E00700AFC777 /* shopping-in.png in Resources */,
 				FA221EF71963E00700AFC777 /* arrow-down.png in Resources */,
 				FA221F041963E00700AFC777 /* credit@2x.png in Resources */,
@@ -624,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5FD1DE196540EB002D2F40 /* MainTableView.swift in Sources */,
 				FA460D65195ACBDC004F9C2A /* AFHTTPRequestOperation.m in Sources */,
 				FA460D40195ACB33004F9C2A /* CoreDataHelper.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
@@ -631,29 +693,39 @@
 				FA460D36195ACAB1004F9C2A /* LxAPPContainer.swift in Sources */,
 				FA460D7F195ACBF0004F9C2A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FA460D6D195ACBDC004F9C2A /* AFURLSessionManager.m in Sources */,
+				FA5FD1DC196540A5002D2F40 /* LxbaseTableView.swift in Sources */,
+				FA5FD1E019654147002D2F40 /* LxbaseView.swift in Sources */,
 				FA221EB519639FAB00AFC777 /* LxNetHelper.swift in Sources */,
 				FA460D67195ACBDC004F9C2A /* AFHTTPSessionManager.m in Sources */,
 				FA460D4A195ACB69004F9C2A /* LxUserInfoEntity.swift in Sources */,
 				FA460D68195ACBDC004F9C2A /* AFNetworkReachabilityManager.m in Sources */,
+				FA5FD1D2196529B5002D2F40 /* LxbaseSplitViewController.swift in Sources */,
 				FA460D3C195ACB01004F9C2A /* LxbaseViewController.swift in Sources */,
 				FA460D83195ACBF0004F9C2A /* UIImageView+AFNetworking.m in Sources */,
+				FA5FD1D419652AD4002D2F40 /* MainSplitViewController.swift in Sources */,
 				FA460D84195ACBF0004F9C2A /* UIProgressView+AFNetworking.m in Sources */,
+				FA5FD1D619652B2A002D2F40 /* LxbaseNavigationController.swift in Sources */,
 				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
+				FA5FD1D819652B7F002D2F40 /* MainNavigationController.swift in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,
 				FA460D6B195ACBDC004F9C2A /* AFURLRequestSerialization.m in Sources */,
 				FA460D6A195ACBDC004F9C2A /* AFURLConnectionOperation.m in Sources */,
 				FA460D82195ACBF0004F9C2A /* UIButton+AFNetworking.m in Sources */,
 				FA460D80195ACBF0004F9C2A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				FA5FD1E4196541DB002D2F40 /* LxbaseTableViewController.swift in Sources */,
 				FA460D66195ACBDC004F9C2A /* AFHTTPRequestOperationManager.m in Sources */,
 				FA221EB91963A91D00AFC777 /* MBProgressHUD.m in Sources */,
 				FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */,
 				FA460D49195ACB69004F9C2A /* LxAppInfoEntity.swift in Sources */,
 				FA460D69195ACBDC004F9C2A /* AFSecurityPolicy.m in Sources */,
+				FA5FD1E6196541F8002D2F40 /* MainTableViewController.swift in Sources */,
+				FA5FD1E219654179002D2F40 /* MainView.swift in Sources */,
 				FA460D41195ACB33004F9C2A /* LxDBAccessor.swift in Sources */,
 				FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */,
 				FA460D18195AC9B6004F9C2A /* AppDelegate.swift in Sources */,
 				FA460D37195ACAB1004F9C2A /* LxServiceInfo.swift in Sources */,
+				FA5FD1D0196522B3002D2F40 /* MainViewController.swift in Sources */,
 				FA460D81195ACBF0004F9C2A /* UIAlertView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

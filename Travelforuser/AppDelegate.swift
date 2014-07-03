@@ -9,9 +9,34 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
-    var window: UIWindow?
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+
+    var window: UIWindow!
+
+    struct MainStoryboard {
+        static let name = "Main"
+        
+        struct Identifiers {
+            static let emptyViewController = "emptyViewController"
+        }
+    }
+    
+    // MARK: View Controller Accessor Convenience
+    
+    // The root view controller of the window will always be a UISplitViewController. This is setup in the main storyboard.
+    var mainSplitViewController: MainSplitViewController {
+        return self.window.rootViewController as MainSplitViewController
+    }
+    
+    // The primary view controller of the split view controller defined in the main storyboard.
+    var primaryViewController: MainNavigationController {
+        return mainSplitViewController.viewControllers[0] as MainNavigationController
+    }
+    
+//    // The view controller that displays the list of documents. If it's not visible, then this value is nil.
+//    var listDocumentsViewController: ListDocumentsViewController? {
+//        return primaryViewController.topViewController as? ListDocumentsViewController
+//    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
@@ -24,7 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window!.rootViewController = mainTestViewController
 //        
 //        self.window!.makeKeyAndVisible()
-
+        
+        self.mainSplitViewController.preferredDisplayMode = .AllVisible
+        
+        self.mainSplitViewController.delegate = self
         LxAPPContainerSharedInstance.appInit()
         
         return true
@@ -63,5 +91,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     var _cdh: CoreDataHelper? = nil
 
+    // MARK: UISplitViewControllerDelegate
+    
+    func targetDisplayModeForActionInSplitViewController(_: UISplitViewController) -> UISplitViewControllerDisplayMode {
+        return .AllVisible
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController _: UIViewController) -> Bool {
+        splitViewController.preferredDisplayMode = .Automatic
+        
+        // If there's a list that's currently selected in separated mode and we want to show it in collapsed mode, we'll transfer over the view controller's settings.
+        if let secondaryViewController = secondaryViewController as? MainNavigationController {
+            primaryViewController.navigationBar.titleTextAttributes = secondaryViewController.navigationBar.titleTextAttributes
+            primaryViewController.navigationBar.tintColor = secondaryViewController.navigationBar.tintColor
+            primaryViewController.toolbar.tintColor = secondaryViewController.toolbar.tintColor
+            
+            primaryViewController.showDetailViewController(secondaryViewController.topViewController, sender: nil)
+        }
+        
+        return true
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController _: UIViewController) -> UIViewController? {
+        // If no list is on the stack, fill the detail area with an empty controller.
+        if primaryViewController.topViewController === primaryViewController.viewControllers[0] {
+            let storyboard = UIStoryboard(name: MainStoryboard.name, bundle: nil)
+            
+            return storyboard.instantiateViewControllerWithIdentifier(MainStoryboard.Identifiers.emptyViewController) as? UIViewController
+        }
+        
+        let textAttributes = primaryViewController.navigationBar.titleTextAttributes
+        let tintColor = primaryViewController.navigationBar.tintColor
+        let poppedViewController = primaryViewController.popViewControllerAnimated(false)
+        
+        let navigationViewController = MainNavigationController(rootViewController: poppedViewController)
+        navigationViewController.navigationBar.titleTextAttributes = textAttributes
+        navigationViewController.navigationBar.tintColor = tintColor
+        navigationViewController.toolbar.tintColor = tintColor
+        
+        return navigationViewController
+    }
 }
 
