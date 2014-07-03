@@ -63,8 +63,6 @@ class MainTestViewController: LxbaseViewController {
 
         LxNetHelperSharedInstance.delegate = self
         LxNetHelperSharedInstance.lxViewController = self
-        var isExistNet:Bool = LxNetHelperSharedInstance.isExistNet()
-        println("isExistNet:\(isExistNet)")
 
         var strUrl = GetUserInfoAction + "?email=" + txtEmail.text + "&password=" + txtPassword.text
         LxNetHelperSharedInstance.GET(strUrl)
@@ -110,9 +108,5 @@ class MainTestViewController: LxbaseViewController {
     override func failure() {
         println("MainTestViewController failure")
     }
-    
-//    override func addHUDView(HUD:MBProgressHUD!) {
-//        self.view.addSubview(HUD)
-//    }
 
 }

@@ -11,7 +11,7 @@ import Foundation
 protocol LxNetHelperDelegate:NSObjectProtocol {
     func success(responseObject:AnyObject!)
     func failure()
-//    func addHUDView(HUD:MBProgressHUD!)
+    func showHUD()
 }
 
 class LxNetHelper:NSObject {
@@ -29,33 +29,30 @@ class LxNetHelper:NSObject {
         return LxNetHelperSharedInstance
     }
     
+    /* 网络有无判断 */
     func isExistNet() -> Bool {
         var status = AFNetworkReachabilityManager.sharedManager().reachable
         
         if false == status {
             //自定义view
-//            var HUD:MBProgressHUD = MBProgressHUD()
-//            self.delegate?.addHUDView(HUD)
-//            let img:UIImage = UIImage(named:"nosmoke.png")
-//            var imageView:UIImageView = UIImageView(image:img)
-//            HUD.customView = imageView
-//            
-//            
-//            // Set custom view mode
-//            HUD.mode = MBProgressHUDModeCustomView
-//            HUD.delegate = self.lxViewController
-//            HUD.labelText = NSLocalizedString("network_conn_failed", comment: "")
-//            
-//            println("HUD.labelText:" + HUD.labelText)
-//            
-//            HUD.show(true)
-//            HUD.hide(true, afterDelay: 1)
+            if self.delegate {
+                self.delegate?.showHUD()
+            }
         }
         
         return status
     }
     
-    func GET(strUrl:String) {
+    /* GET请求 */
+    func GET(strUrl:String, isCheckNet:Bool = true) {
+        if true == isCheckNet {
+            var isExistNet:Bool = self.isExistNet()
+        
+            if false == isExistNet {
+                return
+            }
+        }
+        
         var url:NSURL = NSURL(string:strUrl)
 
         var request:NSURLRequest = NSURLRequest(URL:url, cachePolicy:NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData ,timeoutInterval:TimeOut)

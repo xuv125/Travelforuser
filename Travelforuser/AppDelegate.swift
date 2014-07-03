@@ -18,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 //        // Override point for customization after application launch.
 //        self.window!.backgroundColor = UIColor.whiteColor()
+        
+//        var mainTestViewController:MainTestViewController = MainTestViewController()
+//        self.window!.addSubview(mainTestViewController.view)
+//        self.window!.rootViewController = mainTestViewController
+//        
 //        self.window!.makeKeyAndVisible()
+
         LxAPPContainerSharedInstance.appInit()
         
         return true
