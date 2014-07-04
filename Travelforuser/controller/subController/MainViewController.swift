@@ -8,7 +8,11 @@
 
 import UIKit
 
-class MainViewController: LxbaseViewController {
+class MainViewController: LxbaseViewController, UISplitViewControllerDelegate {
+    
+    var mainPopoverController:UIPopoverController?
+    
+    @IBOutlet var toolBar:UIToolbar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +35,22 @@ class MainViewController: LxbaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // #pragma mark: UISplitViewControllerDelegate
+    func splitViewController(svc: UISplitViewController!, willHideViewController aViewController: UIViewController!, withBarButtonItem barButtonItem: UIBarButtonItem!, forPopoverController pc: UIPopoverController!) {
+        barButtonItem.title = "Customers"
+        var items:NSMutableArray = NSMutableArray(array: self.toolBar.items, copyItems:true)
+        items.insertObject(barButtonItem, atIndex: 0)
+        self.toolBar.setItems(items, animated: true)
+        
+        mainPopoverController = pc
+    }
+
+    func splitViewController(svc: UISplitViewController!, willShowViewController aViewController: UIViewController!, invalidatingBarButtonItem barButtonItem: UIBarButtonItem!) {
+        var items:NSMutableArray = NSMutableArray(array: self.toolBar.items, copyItems:true)
+        items.removeObject(barButtonItem)
+        self.toolBar.setItems(items, animated: true)
+        mainPopoverController = nil
+    }
 
 }

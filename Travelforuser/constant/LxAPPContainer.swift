@@ -39,6 +39,8 @@ class LxAPPContainer : NSObject, LxNetHelperDelegate {
     
     /* app初期化 */
     func appInit() {
+//        println("LanguageCode:" + LanguageCode)
+        
         //网络是否可用，第一次初始化调用
         LxNetHelperSharedInstance.isExistNet()
         var lxAppInfoEntity:LxAppInfoEntity = LxDBAccessorSharedInstance.getAppInfo()

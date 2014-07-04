@@ -23,9 +23,12 @@ let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 //-------------------获取设备大小-------------------------
 
 //工程名定义
-let storeName = PROJECT_NAME
+let storeName:String = PROJECT_NAME
 //数据文件物理名名定义
-let storeFilename = storeName + ".sqlite"
+let storeFilename:String = storeName + ".sqlite"
+
+//设备语言code
+let LanguageCode:String = NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode) as String
 
 //shared instance定义
 //共通逻辑处理:网络有无，app初期化，app信息和用户信息持久化保存
@@ -46,10 +49,14 @@ let to_mail = "XXXXX@qq.com"
 let bcc_mail = "xing_lun@hotmail.com"
 //-------------------mail 定义-------------------------
 
+//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language_id=en
+//http://localhost:8080/pirateAllianceWeb/com/clearDeviceBadge.action?device_token=1233
+//http://localhost:8080/pirateAllianceWeb/com/userLogin.action?email=xing_lun@hotmail.com&password=12345678
 //-------------------Servlet 定义-------------------------
 let UserRegisterAction = ServiceUrl + "com/userRegister.action"
 let GetUserInfoAction = ServiceUrl + "com/userLogin.action"
+let GetGoodsInfoAction = ServiceUrl + "com/getGoodsInfoList.action"
 let SetApnsInfoAction = ServiceUrl + "com/setApnsInfo.action"
-let ClearDeviceBadgeAction = ServiceUrl + "com/clear_device_badge_servlet.php"
+let ClearDeviceBadgeAction = ServiceUrl + "com/clearDeviceBadge.action"
 //........add
 //-------------------Servlet 定义-------------------------

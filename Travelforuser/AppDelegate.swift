@@ -92,7 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var _cdh: CoreDataHelper? = nil
 
     // MARK: UISplitViewControllerDelegate
-    
     func targetDisplayModeForActionInSplitViewController(_: UISplitViewController) -> UISplitViewControllerDisplayMode {
         return .AllVisible
     }
@@ -117,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         if primaryViewController.topViewController === primaryViewController.viewControllers[0] {
             let storyboard = UIStoryboard(name: MainStoryboard.name, bundle: nil)
             
-            return storyboard.instantiateViewControllerWithIdentifier(MainStoryboard.Identifiers.emptyViewController) as? UIViewController
+            return storyboard.instantiateViewControllerWithIdentifier(MainStoryboard.Identifiers.emptyViewController) as? MainViewController
         }
         
         let textAttributes = primaryViewController.navigationBar.titleTextAttributes

@@ -15,8 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="C2M-ZE-xhk" customClass="MainView" customModule="Travelforuser" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-2S-r7c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Menu" id="BSS-Hb-gP0"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="toolBar" destination="iqS-2S-r7c" id="rCM-xP-dR2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeM-gt-C6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
