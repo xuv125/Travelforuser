@@ -55,9 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 //        
 //        self.window!.makeKeyAndVisible()
         
-//        self.mainSplitViewController.preferredDisplayMode = .AllVisible
-//        
-//        self.mainSplitViewController.delegate = self
+        self.mainSplitViewController.preferredDisplayMode = .AllVisible
+        
+        self.mainSplitViewController.delegate = self
         LxAPPContainerSharedInstance.appInit()
         
         return true
