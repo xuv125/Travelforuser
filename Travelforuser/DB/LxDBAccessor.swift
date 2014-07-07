@@ -102,30 +102,30 @@ class LxDBAccessor : NSObject {
         request.returnsObjectsAsFaults = false
 //        request.predicate = NSPredicate(format:"username = %@", "")
         
-        var lxAppInfoEntity:LxAppInfoEntity = LxAppInfoEntity()
+        var entity:LxAppInfoEntity = LxAppInfoEntity()
         var err:NSError? = nil
         var results = self.managedObjectContext.executeFetchRequest(request, error:&err)
         if err {
             println("Error LxDBAccessor::getAppInfo:->\(err)")
-            return lxAppInfoEntity;
+            return entity
         }
 
         if results.count > 0 {
             var res = results[0]  as NSManagedObject
-            lxAppInfoEntity.setEntity(res)
-            lxAppInfoEntity.isEmpty = false
+            entity.setEntity(res)
+            entity.isEmpty = false
         }
-        return lxAppInfoEntity
+        return entity
     }
 
     /* 设置app信息 */
-    func setAppInfo (lxAppInfoEntity:LxAppInfoEntity) -> Bool {
+    func setAppInfo (entity:LxAppInfoEntity) -> Bool {
         var result:Bool = self.truncateEntity("AppInfoEntity")
         if false == result {
             return false
         }
         
-        var entity:NSManagedObject = lxAppInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
+        var mobj:NSManagedObject = entity.getModel(inManagedObjectContext: self.managedObjectContext)
         
         var err:NSError? = nil
         self.managedObjectContext.save(&err)
@@ -141,31 +141,31 @@ class LxDBAccessor : NSObject {
         var request = NSFetchRequest(entityName:"UserInfoEntity")
         request.returnsObjectsAsFaults = false
         
-        var lxUserInfoEntity:LxUserInfoEntity = LxUserInfoEntity()
+        var entity:LxUserInfoEntity = LxUserInfoEntity()
         
         var err:NSError? = nil
         var results = self.managedObjectContext.executeFetchRequest(request, error:&err)
         if err {
             println("Error LxDBAccessor::getUserInfo:->\(err)")
-            return lxUserInfoEntity;
+            return entity
         }
         
         if results.count > 0 {
             var res = results[0] as NSManagedObject
-            lxUserInfoEntity.setEntity(res)
-            lxUserInfoEntity.isEmpty = false
+            entity.setEntity(res)
+            entity.isEmpty = false
         }
-        return lxUserInfoEntity
+        return entity
     }
     
     /* 设置用户信息 */
-    func setUserInfo (lxUserInfoEntity:LxUserInfoEntity) -> Bool {
+    func setUserInfo (entity:LxUserInfoEntity) -> Bool {
         var result:Bool = self.truncateEntity("UserInfoEntity")
         if false == result {
             return false
         }
         
-        var entity:NSManagedObject = lxUserInfoEntity.getModel(inManagedObjectContext: self.managedObjectContext)
+        var mobj:NSManagedObject = entity.getModel(inManagedObjectContext: self.managedObjectContext)
         
         var err:NSError? = nil
         self.managedObjectContext.save(&err)
@@ -175,4 +175,58 @@ class LxDBAccessor : NSObject {
         }
         return true
     }
+    
+    /* 获取本地商品列表 */
+    func getGoodsInfoList () -> AnyObject[]! {
+        var request = NSFetchRequest(entityName:"GoodsInfoEntity")
+        request.returnsObjectsAsFaults = false
+        
+        var entityList:AnyObject[] = AnyObject[]()
+        var entity:LxGoodsInfoEntity = LxGoodsInfoEntity()
+        
+        var err:NSError? = nil
+        var results = self.managedObjectContext.executeFetchRequest(request, error:&err)
+        if err {
+            println("Error LxDBAccessor::getGoodsInfoList:->\(err)")
+            return entityList
+        }
+        
+        for resultItem : AnyObject in results {
+            entity.setEntity(resultItem as NSManagedObject)
+            entity.isEmpty = false
+            
+            entityList += entity
+        }
+        return entityList
+    }
+    
+    /* 保存商品到本地 */
+    func addGoods (entity:LxGoodsInfoEntity) -> Bool {
+        
+        var mobj:NSManagedObject = entity.getModel(inManagedObjectContext: self.managedObjectContext)
+        
+        var err:NSError? = nil
+        self.managedObjectContext.save(&err)
+        if err {
+            println("Error LxDBAccessor::addGoods:->\(err)")
+            return false
+        }
+        return true
+    }
+    
+    /* 同步服务器商品列表到本地 */
+    func refreshGoodsInfoList (array:AnyObject[]!) -> Bool {
+
+        for entity : AnyObject in array {
+            var result = self.addGoods(entity as LxGoodsInfoEntity)
+            if false == result {
+                println("Error LxDBAccessor::refreshGoodsInfoList:")
+                return false;
+            }
+        }
+
+        return true
+    }
+    
+
 }

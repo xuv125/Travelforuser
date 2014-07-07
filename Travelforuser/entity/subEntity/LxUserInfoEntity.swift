@@ -41,7 +41,7 @@ class LxUserInfoEntity: LxbaseEntity {
     override func setEntity(mobj:NSManagedObject) -> Bool{
         var result:Bool = super.setEntity(mobj)
         if false == result {
-            return false;
+            return false
         }
         
         self.account_id = mobj.valueForKey("account_id") as String
@@ -68,7 +68,7 @@ class LxUserInfoEntity: LxbaseEntity {
         self.update_time = mobj.valueForKey("update_time") as String
         self.user_id = mobj.valueForKey("user_id") as String
         
-        return true;
+        return true
     }
     
     override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
@@ -98,36 +98,63 @@ class LxUserInfoEntity: LxbaseEntity {
         entity.setValue(self.update_time, forKey:"update_time")
         entity.setValue(self.user_id, forKey:"user_id")
 
-        return entity;
+        return entity
     }
     
-    override func copyEntity(lxbaseEntity:LxbaseEntity) {
-        super.copyEntity(lxbaseEntity)
-        var lxUserInfoEntity:LxUserInfoEntity = lxbaseEntity as LxUserInfoEntity
+    override func initFormMap(map:NSDictionary!) {
+        self.isEmpty = false
+        self.account_id = map.objectForKey("account_id") as String
+        self.create_time = map.objectForKey("create_time") as String
+        self.email = map.objectForKey("email") as String
+        self.golden_coin_id = map.objectForKey("golden_coin_id") as String
+        self.golden_coin = map.objectForKey("golden_coin") as Int
+        self.last_login_time = map.objectForKey("last_login_time") as String
+        self.login_count = map.objectForKey("login_count") as Int
+        self.login_time = map.objectForKey("login_time") as String
+        self.name_en_family = map.objectForKey("name_en_family") as String
+        self.name_en_middle = map.objectForKey("name_en_middle") as String
+        self.name_en_last = map.objectForKey("name_en_last") as String
+        self.name_kanji_sei = map.objectForKey("name_kanji_sei") as String
+        self.name_kanji_mei = map.objectForKey("name_kanji_mei") as String
+        self.name_katakana_sei = map.objectForKey("name_katakana_sei") as String
+        self.name_katakana_mei = map.objectForKey("name_katakana_mei") as String
+        self.password = map.objectForKey("password") as String
+        self.shop_id = map.objectForKey("shop_id") as String
+        self.silver_coin_id = map.objectForKey("silver_coin_id") as String
+        self.silver_coin = map.objectForKey("silver_coin") as Int
+        self.status = map.objectForKey("status") as Int
+        self.tel = map.objectForKey("tel") as String
+        self.update_time = map.objectForKey("update_time") as String
+        self.user_id = map.objectForKey("user_id") as String
+    }
+    
+    override func copyEntity(baseEntity:LxbaseEntity) {
+        super.copyEntity(baseEntity)
+        var entity:LxUserInfoEntity = baseEntity as LxUserInfoEntity
         
-        self.account_id = lxUserInfoEntity.account_id
-        self.create_time = lxUserInfoEntity.create_time
-        self.email = lxUserInfoEntity.email
-        self.golden_coin_id = lxUserInfoEntity.golden_coin_id
-        self.golden_coin = lxUserInfoEntity.golden_coin
-        self.last_login_time = lxUserInfoEntity.last_login_time
-        self.login_count = lxUserInfoEntity.login_count
-        self.login_time = lxUserInfoEntity.login_time
-        self.name_en_family = lxUserInfoEntity.name_en_family
-        self.name_en_middle = lxUserInfoEntity.name_en_middle
-        self.name_en_last = lxUserInfoEntity.name_en_last
-        self.name_kanji_sei = lxUserInfoEntity.name_kanji_sei
-        self.name_kanji_mei = lxUserInfoEntity.name_kanji_mei
-        self.name_katakana_sei = lxUserInfoEntity.name_katakana_sei
-        self.name_katakana_mei = lxUserInfoEntity.name_katakana_mei
-        self.password = lxUserInfoEntity.password
-        self.shop_id = lxUserInfoEntity.shop_id
-        self.silver_coin_id = lxUserInfoEntity.silver_coin_id
-        self.silver_coin = lxUserInfoEntity.silver_coin
-        self.status = lxUserInfoEntity.status
-        self.tel = lxUserInfoEntity.tel
-        self.update_time = lxUserInfoEntity.update_time
-        self.user_id = lxUserInfoEntity.user_id
+        self.account_id = entity.account_id
+        self.create_time = entity.create_time
+        self.email = entity.email
+        self.golden_coin_id = entity.golden_coin_id
+        self.golden_coin = entity.golden_coin
+        self.last_login_time = entity.last_login_time
+        self.login_count = entity.login_count
+        self.login_time = entity.login_time
+        self.name_en_family = entity.name_en_family
+        self.name_en_middle = entity.name_en_middle
+        self.name_en_last = entity.name_en_last
+        self.name_kanji_sei = entity.name_kanji_sei
+        self.name_kanji_mei = entity.name_kanji_mei
+        self.name_katakana_sei = entity.name_katakana_sei
+        self.name_katakana_mei = entity.name_katakana_mei
+        self.password = entity.password
+        self.shop_id = entity.shop_id
+        self.silver_coin_id = entity.silver_coin_id
+        self.silver_coin = entity.silver_coin
+        self.status = entity.status
+        self.tel = entity.tel
+        self.update_time = entity.update_time
+        self.user_id = entity.user_id
     }
     
     override func toString() -> String {

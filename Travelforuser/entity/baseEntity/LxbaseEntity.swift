@@ -17,18 +17,21 @@ class LxbaseEntity: NSObject {
     
     func setEntity(mobj:NSManagedObject) -> Bool {
         if nil == mobj {
-            return false;
+            return false
         }
         self.isEmpty = false
-        return true;
+        return true
     }
     
     func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
-        return NSManagedObject();
+        return NSManagedObject()
     }
     
-    func copyEntity(lxbaseEntity:LxbaseEntity) {
-        self.isEmpty = lxbaseEntity.isEmpty
+    func initFormMap(map:NSDictionary!) {
+    }
+    
+    func copyEntity(baseEntity:LxbaseEntity) {
+        self.isEmpty = baseEntity.isEmpty
     }
     
     func toString() -> String {

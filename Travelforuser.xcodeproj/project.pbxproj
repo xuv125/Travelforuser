@@ -71,6 +71,7 @@
 		FA460D86195ACBF0004F9C2A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA460D7E195ACBF0004F9C2A /* UIWebView+AFNetworking.m */; };
 		FA460D89195AD140004F9C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D8B195AD140004F9C2A /* InfoPlist.strings */; };
 		FA460D8E195AD175004F9C2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA460D90195AD175004F9C2A /* Localizable.strings */; };
+		FA5D51B0196A651200A308AD /* LxGoodsInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D51AF196A651200A308AD /* LxGoodsInfoEntity.swift */; };
 		FA5FD1CE196521A0002D2F40 /* InfoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5FD1CD196521A0002D2F40 /* InfoList.storyboard */; };
 		FA5FD1D0196522B3002D2F40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1CF196522B3002D2F40 /* MainViewController.swift */; };
 		FA5FD1D2196529B5002D2F40 /* LxbaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */; };
@@ -190,6 +191,7 @@
 		FA460D92195AD1A5004F9C2A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA460D93195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FA460D94195AD1B2004F9C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA5D51AF196A651200A308AD /* LxGoodsInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxGoodsInfoEntity.swift; path = entity/subEntity/LxGoodsInfoEntity.swift; sourceTree = "<group>"; };
 		FA5FD1CD196521A0002D2F40 /* InfoList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InfoList.storyboard; path = Storyboard/InfoList.storyboard; sourceTree = "<group>"; };
 		FA5FD1CF196522B3002D2F40 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = controller/subController/MainViewController.swift; sourceTree = "<group>"; };
 		FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseSplitViewController.swift; path = controller/baseController/LxbaseSplitViewController.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 			children = (
 				FA460D47195ACB69004F9C2A /* LxAppInfoEntity.swift */,
 				FA460D48195ACB69004F9C2A /* LxUserInfoEntity.swift */,
+				FA5D51AF196A651200A308AD /* LxGoodsInfoEntity.swift */,
 			);
 			name = subEntity;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				FA460D84195ACBF0004F9C2A /* UIProgressView+AFNetworking.m in Sources */,
 				FA5FD1D619652B2A002D2F40 /* LxbaseNavigationController.swift in Sources */,
 				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
+				FA5D51B0196A651200A308AD /* LxGoodsInfoEntity.swift in Sources */,
 				FA5FD1D819652B7F002D2F40 /* MainNavigationController.swift in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,

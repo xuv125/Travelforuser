@@ -10,8 +10,8 @@ import CoreData
 
 class LxAppInfoEntity: LxbaseEntity {
     
-    var name:String = "";
-    var version:String = "";
+    var name:String = ""
+    var version:String = ""
     
     init() {
         super.init()
@@ -20,13 +20,13 @@ class LxAppInfoEntity: LxbaseEntity {
     override func setEntity(mobj:NSManagedObject) -> Bool {
         var result:Bool = super.setEntity(mobj)
         if false == result {
-            return false;
+            return false
         }
         
         self.name = mobj.valueForKey("name") as String
         self.version = mobj.valueForKey("version") as String
 
-        return true;
+        return true
     }
     
     override func getModel(inManagedObjectContext context: NSManagedObjectContext!) -> NSManagedObject{
@@ -35,15 +35,21 @@ class LxAppInfoEntity: LxbaseEntity {
         entity.setValue(self.name, forKey:"name")
         entity.setValue(self.version, forKey:"version")
         
-        return entity;
+        return entity
     }
     
-    override func copyEntity(lxbaseEntity:LxbaseEntity) {
-        super.copyEntity(lxbaseEntity)
+    override func initFormMap(map:NSDictionary!) {
+        self.isEmpty = false
+        self.name = map.objectForKey("name") as String
+        self.version = map.objectForKey("version") as String
+    }
+    
+    override func copyEntity(baseEntity:LxbaseEntity) {
+        super.copyEntity(baseEntity)
         
-        var lxAppInfoEntity:LxAppInfoEntity = lxbaseEntity as LxAppInfoEntity
-        self.name = lxAppInfoEntity.name
-        self.version = lxAppInfoEntity.version
+        var entity:LxAppInfoEntity = baseEntity as LxAppInfoEntity
+        self.name = entity.name
+        self.version = entity.version
     }
     
     override func toString() -> String {

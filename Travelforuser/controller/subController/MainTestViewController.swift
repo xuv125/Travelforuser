@@ -75,30 +75,7 @@ class MainTestViewController: LxbaseViewController {
         
         var lxUserInfoEntity:LxUserInfoEntity = LxUserInfoEntity()
         
-        lxUserInfoEntity.isEmpty = false
-        lxUserInfoEntity.account_id = responseObj.objectForKey("account_id") as String
-        lxUserInfoEntity.create_time = responseObj.objectForKey("create_time") as String
-        lxUserInfoEntity.email = responseObj.objectForKey("email") as String
-        lxUserInfoEntity.golden_coin_id = responseObj.objectForKey("golden_coin_id") as String
-        lxUserInfoEntity.golden_coin = responseObj.objectForKey("golden_coin") as Int
-        lxUserInfoEntity.last_login_time = responseObj.objectForKey("last_login_time") as String
-        lxUserInfoEntity.login_count = responseObj.objectForKey("login_count") as Int
-        lxUserInfoEntity.login_time = responseObj.objectForKey("login_time") as String
-        lxUserInfoEntity.name_en_family = responseObj.objectForKey("name_en_family") as String
-        lxUserInfoEntity.name_en_middle = responseObj.objectForKey("name_en_middle") as String
-        lxUserInfoEntity.name_en_last = responseObj.objectForKey("name_en_last") as String
-        lxUserInfoEntity.name_kanji_sei = responseObj.objectForKey("name_kanji_sei") as String
-        lxUserInfoEntity.name_kanji_mei = responseObj.objectForKey("name_kanji_mei") as String
-        lxUserInfoEntity.name_katakana_sei = responseObj.objectForKey("name_katakana_sei") as String
-        lxUserInfoEntity.name_katakana_mei = responseObj.objectForKey("name_katakana_mei") as String
-        lxUserInfoEntity.password = responseObj.objectForKey("password") as String
-        lxUserInfoEntity.shop_id = responseObj.objectForKey("shop_id") as String
-        lxUserInfoEntity.silver_coin_id = responseObj.objectForKey("silver_coin_id") as String
-        lxUserInfoEntity.silver_coin = responseObj.objectForKey("silver_coin") as Int
-        lxUserInfoEntity.status = responseObj.objectForKey("status") as Int
-        lxUserInfoEntity.tel = responseObj.objectForKey("tel") as String
-        lxUserInfoEntity.update_time = responseObj.objectForKey("update_time") as String
-        lxUserInfoEntity.user_id = responseObj.objectForKey("user_id") as String
+        lxUserInfoEntity.initFormMap(responseObj)
         
         println(lxUserInfoEntity.toString())
         

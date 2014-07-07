@@ -70,7 +70,7 @@ class CoreDataHelper {
             Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
             
             */
-//            println("Unresolved error \(error), \(error)")
+            println("Unresolved error \(error), \(error)")
             abort()
         }
         }
