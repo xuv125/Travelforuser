@@ -56,7 +56,7 @@ class LxAPPContainer : NSObject, LxNetHelperDelegate {
             //用户自动登录认证
             LxNetHelperSharedInstance.delegate = self
             var strUrl = GetUserInfoAction + "?email=" + lxUserInfoEntity.email + "&password=" + lxUserInfoEntity.password
-            LxNetHelperSharedInstance.GET(strUrl, isCheckNet: false)
+            LxNetHelperSharedInstance.GET(strUrl, success: successRequestUser, failure: failureRequestUser, isCheckNet: false)
         }
 
         var version:String = NSBundle.mainBundle().infoDictionary["CFBundleVersion"] as String
@@ -76,7 +76,7 @@ class LxAPPContainer : NSObject, LxNetHelperDelegate {
     }
     
     // #pragma mark - LxNetHelperDelegate
-    func success(responseObject:AnyObject!) {
+    func successRequestUser(responseObject:AnyObject!) {
         println("LxAPPContainer:success")
 
         var responseObj:NSDictionary! = responseObject as NSDictionary
@@ -90,8 +90,8 @@ class LxAPPContainer : NSObject, LxNetHelperDelegate {
         LxDBAccessorSharedInstance.setUserInfo(lxUserInfoEntity)
     }
     
-    func failure() {
-        println("LxAPPContainer:failure")
+    func failureRequestUser(error: NSError!) {
+        println("LxAPPContainer:failure: \(error)")
     }
     
     func showHUD() {

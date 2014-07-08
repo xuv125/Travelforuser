@@ -9,8 +9,6 @@
 import Foundation
 
 protocol LxNetHelperDelegate:NSObjectProtocol {
-    func success(responseObject:AnyObject!)
-    func failure()
     func showHUD()
 }
 
@@ -44,7 +42,7 @@ class LxNetHelper:NSObject {
     }
     
     /* GET请求 */
-    func GET(strUrl:String, isCheckNet:Bool = true) {
+    func GET(strUrl:String, success:(responseObject:AnyObject!) -> Void, failure: (error: NSError!) -> Void, isCheckNet:Bool = true) {
         if true == isCheckNet {
             var isExistNet:Bool = self.isExistNet()
         
@@ -62,12 +60,9 @@ class LxNetHelper:NSObject {
 
         operation.setCompletionBlockWithSuccess(
             { (operation: AFHTTPRequestOperation!, responseObject:AnyObject!) in
-            println("responseObject:\(responseObject)")
-            self.delegate?.success(responseObject)
-                
+            success(responseObject: responseObject)
         }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
-            println("error: \(error)")
-            self.delegate?.failure()
+            failure(error: error)
         })
         
         operation.start()

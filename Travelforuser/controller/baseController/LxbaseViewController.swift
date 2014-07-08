@@ -34,13 +34,13 @@ class LxbaseViewController: UIViewController, MFMailComposeViewControllerDelegat
     */
     
     // #pragma mark - LxNetHelperDelegate
-    func success(responseObject:AnyObject!) {
-        println("LxbaseViewController:success")
-    }
-    
-    func failure() {
-        println("LxbaseViewController:failure")
-    }
+//    func success(responseObject:AnyObject!) {
+//        println("LxbaseViewController:success")
+//    }
+//    
+//    func failure() {
+//        println("LxbaseViewController:failure")
+//    }
     
     func showHUD() {
         self.addHUDView("network_conn_failed", imgName:"nosmoke.png")

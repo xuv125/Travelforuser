@@ -65,12 +65,12 @@ class MainTestViewController: LxbaseViewController {
         LxNetHelperSharedInstance.lxViewController = self
 
         var strUrl = GetUserInfoAction + "?email=" + txtEmail.text + "&password=" + txtPassword.text
-        LxNetHelperSharedInstance.GET(strUrl)
+        LxNetHelperSharedInstance.GET(strUrl, success: successTest, failure: failureTest)
 
     }
     
     // #pragma mark - LxNetHelperDelegate
-    override func success(responseObject:AnyObject!) {
+    func successTest(responseObject:AnyObject!) {
         var responseObj:NSDictionary! = responseObject as NSDictionary
         
         var lxUserInfoEntity:LxUserInfoEntity = LxUserInfoEntity()
@@ -82,8 +82,8 @@ class MainTestViewController: LxbaseViewController {
         LxDBAccessorSharedInstance.setUserInfo(lxUserInfoEntity)
     }
     
-    override func failure() {
-        println("MainTestViewController failure")
+    func failureTest(error: NSError!) {
+        println("MainTestViewController failure: \(error)")
     }
 
 }
