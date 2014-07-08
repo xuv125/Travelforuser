@@ -42,6 +42,10 @@
 		FA327B66196B7D0F000B17C6 /* AppInfoDBAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B65196B7D0F000B17C6 /* AppInfoDBAccessor.swift */; };
 		FA327B68196B7DA9000B17C6 /* UserInfoDBAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B67196B7DA9000B17C6 /* UserInfoDBAccessor.swift */; };
 		FA327B6A196B7DE5000B17C6 /* GoodsInfoDBAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B69196B7DE5000B17C6 /* GoodsInfoDBAccessor.swift */; };
+		FA327B6C196BC734000B17C6 /* LxbaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B6B196BC734000B17C6 /* LxbaseCollectionViewCell.swift */; };
+		FA327B6E196BC84F000B17C6 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B6D196BC84F000B17C6 /* PhotoCell.swift */; };
+		FA327B70196BCD78000B17C6 /* LxbaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B6F196BCD78000B17C6 /* LxbaseCollectionViewController.swift */; };
+		FA327B72196BCE0F000B17C6 /* GoodsListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA327B71196BCE0F000B17C6 /* GoodsListCollectionViewController.swift */; };
 		FA460D18195AC9B6004F9C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA460D17195AC9B6004F9C2A /* AppDelegate.swift */; };
 		FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA460D19195AC9B6004F9C2A /* Travelforuser.xcdatamodeld */; };
 		FA460D1D195AC9B6004F9C2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA460D1C195AC9B6004F9C2A /* Images.xcassets */; };
@@ -137,6 +141,10 @@
 		FA327B65196B7D0F000B17C6 /* AppInfoDBAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfoDBAccessor.swift; path = DB/extension/AppInfoDBAccessor.swift; sourceTree = "<group>"; };
 		FA327B67196B7DA9000B17C6 /* UserInfoDBAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoDBAccessor.swift; path = DB/extension/UserInfoDBAccessor.swift; sourceTree = "<group>"; };
 		FA327B69196B7DE5000B17C6 /* GoodsInfoDBAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsInfoDBAccessor.swift; path = DB/extension/GoodsInfoDBAccessor.swift; sourceTree = "<group>"; };
+		FA327B6B196BC734000B17C6 /* LxbaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseCollectionViewCell.swift; path = view/baseView/LxbaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA327B6D196BC84F000B17C6 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = view/subView/PhotoCell.swift; sourceTree = "<group>"; };
+		FA327B6F196BCD78000B17C6 /* LxbaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseCollectionViewController.swift; path = controller/baseController/LxbaseCollectionViewController.swift; sourceTree = "<group>"; };
+		FA327B71196BCE0F000B17C6 /* GoodsListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListCollectionViewController.swift; path = controller/subController/GoodsListCollectionViewController.swift; sourceTree = "<group>"; };
 		FA460D12195AC9B6004F9C2A /* Travelforuser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelforuser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA460D16195AC9B6004F9C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA460D17195AC9B6004F9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -323,13 +331,13 @@
 			children = (
 				FA5FD1CC1965210A002D2F40 /* Storyboard */,
 				FA221DD01963910400AFC777 /* UI */,
-				FAF2CE14195C09BC00634722 /* models */,
 				FA460D4F195ACBA9004F9C2A /* Networks */,
+				FA460D3D195ACB23004F9C2A /* DB */,
+				FA460D38195ACABE004F9C2A /* controller */,
 				FA460D4E195ACB9E004F9C2A /* view */,
 				FA460D4B195ACB7C004F9C2A /* extension */,
 				FA460D42195ACB3E004F9C2A /* entity */,
-				FA460D3D195ACB23004F9C2A /* DB */,
-				FA460D38195ACABE004F9C2A /* controller */,
+				FAF2CE14195C09BC00634722 /* models */,
 				FA460D32195ACA9A004F9C2A /* constant */,
 				FA460D17195AC9B6004F9C2A /* AppDelegate.swift */,
 				FA460D1C195AC9B6004F9C2A /* Images.xcassets */,
@@ -395,6 +403,7 @@
 				FA5FD1D1196529B5002D2F40 /* LxbaseSplitViewController.swift */,
 				FA5FD1D519652B2A002D2F40 /* LxbaseNavigationController.swift */,
 				FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */,
+				FA327B6F196BCD78000B17C6 /* LxbaseCollectionViewController.swift */,
 			);
 			name = baseController;
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				FA5FD1D319652AD4002D2F40 /* MainSplitViewController.swift */,
 				FA5FD1D719652B7F002D2F40 /* MainNavigationController.swift */,
 				FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */,
+				FA327B71196BCE0F000B17C6 /* GoodsListCollectionViewController.swift */,
 			);
 			name = subController;
 			sourceTree = "<group>";
@@ -538,6 +548,7 @@
 			children = (
 				FA5FD1DD196540EB002D2F40 /* MainTableView.swift */,
 				FA5FD1E119654179002D2F40 /* MainView.swift */,
+				FA327B6D196BC84F000B17C6 /* PhotoCell.swift */,
 			);
 			name = subView;
 			sourceTree = "<group>";
@@ -547,6 +558,7 @@
 			children = (
 				FA5FD1DB196540A5002D2F40 /* LxbaseTableView.swift */,
 				FA5FD1DF19654147002D2F40 /* LxbaseView.swift */,
+				FA327B6B196BC734000B17C6 /* LxbaseCollectionViewCell.swift */,
 			);
 			name = baseView;
 			sourceTree = "<group>";
@@ -708,7 +720,9 @@
 				FA5FD1DE196540EB002D2F40 /* MainTableView.swift in Sources */,
 				FA327B6A196B7DE5000B17C6 /* GoodsInfoDBAccessor.swift in Sources */,
 				FA460D65195ACBDC004F9C2A /* AFHTTPRequestOperation.m in Sources */,
+				FA327B72196BCE0F000B17C6 /* GoodsListCollectionViewController.swift in Sources */,
 				FA460D40195ACB33004F9C2A /* CoreDataHelper.swift in Sources */,
+				FA327B6E196BC84F000B17C6 /* PhotoCell.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
 				FA460D36195ACAB1004F9C2A /* LxAPPContainer.swift in Sources */,
@@ -719,6 +733,7 @@
 				FA221EB519639FAB00AFC777 /* LxNetHelper.swift in Sources */,
 				FA460D67195ACBDC004F9C2A /* AFHTTPSessionManager.m in Sources */,
 				FA460D4A195ACB69004F9C2A /* LxUserInfoEntity.swift in Sources */,
+				FA327B70196BCD78000B17C6 /* LxbaseCollectionViewController.swift in Sources */,
 				FA460D68195ACBDC004F9C2A /* AFNetworkReachabilityManager.m in Sources */,
 				FA5FD1D2196529B5002D2F40 /* LxbaseSplitViewController.swift in Sources */,
 				FA460D3C195ACB01004F9C2A /* LxbaseViewController.swift in Sources */,
@@ -741,6 +756,7 @@
 				FA460D66195ACBDC004F9C2A /* AFHTTPRequestOperationManager.m in Sources */,
 				FA221EB91963A91D00AFC777 /* MBProgressHUD.m in Sources */,
 				FA460D1B195AC9B6004F9C2A /* Travelforuser.xcdatamodeld in Sources */,
+				FA327B6C196BC734000B17C6 /* LxbaseCollectionViewCell.swift in Sources */,
 				FA460D49195ACB69004F9C2A /* LxAppInfoEntity.swift in Sources */,
 				FA460D69195ACBDC004F9C2A /* AFSecurityPolicy.m in Sources */,
 				FA5FD1E6196541F8002D2F40 /* MainTableViewController.swift in Sources */,
