@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String{
+extension String {
     //分割字符
     func split(s:String)->String[]{
         if s.isEmpty{
