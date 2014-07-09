@@ -16,10 +16,10 @@ let DOCUMENTS_COVER = NSHomeDirectory().stringByAppendingString("/Documents/Cove
 
 //-------------------获取设备大小-------------------------
 //NavBar高度
-let NavigationBar_HEIGHT = 44
+let NavigationBar_HEIGHT:CGFloat = 44
 //获取屏幕 宽度、高度
-let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
-let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+let SCREEN_WIDTH:CGFloat = UIScreen.mainScreen().bounds.size.width
+let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.size.height
 //-------------------获取设备大小-------------------------
 
 //工程名定义
@@ -55,7 +55,7 @@ let bcc_mail = "xing_lun@hotmail.com"
 //-------------------Servlet 定义-------------------------
 let UserRegisterAction = ServiceUrl + "com/userRegister.action"
 let GetUserInfoAction = ServiceUrl + "com/userLogin.action"
-let GetGoodsInfoAction = ServiceUrl + "com/getGoodsInfoList.action"
+let GetGoodsListAction = ServiceUrl + "com/getGoodsInfoList.action"
 let SetApnsInfoAction = ServiceUrl + "com/setApnsInfo.action"
 let ClearDeviceBadgeAction = ServiceUrl + "com/clearDeviceBadge.action"
 //........add

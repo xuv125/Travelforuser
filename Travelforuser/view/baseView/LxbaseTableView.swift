@@ -14,9 +14,9 @@ class LxbaseTableView: UITableView {
     {
         super.init(coder: aDecoder)
     }
-    
-    init(frame: CGRect) {
-        super.init(frame: frame)
+
+    init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style:style)
         // Initialization code
     }
 
