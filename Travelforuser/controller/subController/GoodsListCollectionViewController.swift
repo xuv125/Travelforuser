@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 倫星. All rights reserved.
 //
 
+import UIKit
+
 class GoodsListCollectionViewController: LxbaseCollectionViewController {
 
     

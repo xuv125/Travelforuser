@@ -110,4 +110,14 @@ extension String {
             let range = Range(start:s, end:e)
             return self.substringWithRange(range)
     }
+    
+    // convert
+    static func stringWithCurrencyStyle(f:Float) -> String {
+        var formatter:NSNumberFormatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        var str:String = formatter.stringFromNumber(f)
+
+        return str
+    }
+
 }
