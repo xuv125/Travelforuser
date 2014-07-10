@@ -16,48 +16,49 @@ class GoodsTableViewCell: LxbaseTableViewCell {
     
     var lxGoodsInfoEntity:LxGoodsInfoEntity = LxGoodsInfoEntity()
     
-    init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    func configureCell(frame: CGRect, entity:LxGoodsInfoEntity!, atIndexPath indexPath: NSIndexPath) -> Bool {
+        self.frame = frame
         
         var width_unit:CGFloat = self.frame.width / 32
         var height_unit:CGFloat = self.frame.height / 20
         
-        goods_img_ImageView = LxImageView(frame: self.frame)
+        self.goods_img_ImageView = LxImageView(frame: self.frame)
         self.contentView.addSubview(goods_img_ImageView)
         
-        name_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 14, width_unit * 15, height_unit))
-        name_Label.backgroundColor = UIColor.clearColor()
-        name_Label.textAlignment = NSTextAlignment.Right
-        name_Label.font = UIFont.systemFontOfSize(14)
+        self.name_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 14, width_unit * 15, height_unit))
+        self.name_Label.backgroundColor = UIColor.clearColor()
+        self.name_Label.textColor = UIColor.whiteColor()
+        self.name_Label.textAlignment = NSTextAlignment.Right
+        self.name_Label.font = UIFont.systemFontOfSize(8)
         self.contentView.addSubview(name_Label)
         
-        descriptionx_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 16, width_unit * 20, height_unit))
-        descriptionx_Label.backgroundColor = UIColor.clearColor()
-        descriptionx_Label.textAlignment = NSTextAlignment.Right
-        descriptionx_Label.font = UIFont.systemFontOfSize(14)
+        self.descriptionx_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 16, width_unit * 20, height_unit))
+        self.descriptionx_Label.backgroundColor = UIColor.clearColor()
+        self.descriptionx_Label.textColor = UIColor.whiteColor()
+        self.descriptionx_Label.textAlignment = NSTextAlignment.Right
+        self.descriptionx_Label.font = UIFont.systemFontOfSize(8)
         self.contentView.addSubview(descriptionx_Label)
         
-        price_Label = LxLabel(frame: CGRectMake(width_unit * 25, height_unit * 16, width_unit * 7, height_unit))
-        price_Label.backgroundColor = UIColor.clearColor()
-        price_Label.textAlignment = NSTextAlignment.Left
-        price_Label.font = UIFont.systemFontOfSize(14)
+        self.price_Label = LxLabel(frame: CGRectMake(width_unit * 25, height_unit * 16, width_unit * 7, height_unit))
+        self.price_Label.backgroundColor = UIColor.clearColor()
+        self.price_Label.textColor = UIColor.whiteColor()
+        self.price_Label.textAlignment = NSTextAlignment.Left
+        self.price_Label.font = UIFont.systemFontOfSize(8)
         self.contentView.addSubview(price_Label)
-    }
-    
-    func configureCell(entity:LxGoodsInfoEntity!) -> Bool {
+        
         if true == entity.isEmpty {
             return false
         }
         
         self.lxGoodsInfoEntity.copyEntity(entity)
-        goods_img_ImageView.GET(self.lxGoodsInfoEntity.goods_img, success:successGetImage, failure:failureGetImage)
+        self.goods_img_ImageView.GET(GoodsImgUrl + self.lxGoodsInfoEntity.goods_img, success:successGetImage, failure:failureGetImage)
         return true
     }
     
     func successGetImage(responseObject:AnyObject!) {
-        name_Label.text = self.lxGoodsInfoEntity.name
-        descriptionx_Label.text = self.lxGoodsInfoEntity.descriptionx
-        price_Label.text = String.stringWithCurrencyStyle(self.lxGoodsInfoEntity.price)
+        self.name_Label.text = self.lxGoodsInfoEntity.name
+        self.descriptionx_Label.text = self.lxGoodsInfoEntity.descriptionx
+        self.price_Label.text = String.stringWithCurrencyStyle(self.lxGoodsInfoEntity.price)
     }
     
     func failureGetImage(error: NSError!) {

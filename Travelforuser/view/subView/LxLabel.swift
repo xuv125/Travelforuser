@@ -7,5 +7,5 @@
 //
 
 class LxLabel: LxbaseLabel {
-
+    
 }

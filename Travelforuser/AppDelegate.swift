@@ -30,10 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     // The primary view controller of the split view controller defined in the main storyboard.
     var primaryViewController: MainNavigationController {
-        var endIndex:Int = mainSplitViewController.viewControllers.endIndex
-        var mainNavigationController: MainNavigationController = mainSplitViewController.viewControllers[endIndex] as MainNavigationController
-        return mainNavigationController
-//        return mainSplitViewController.viewControllers[0] as MainNavigationController
+//        var endIndex:Int = mainSplitViewController.viewControllers.endIndex
+//        var mainNavigationController: MainNavigationController = mainSplitViewController.viewControllers[endIndex] as MainNavigationController
+//        return mainNavigationController
+        return mainSplitViewController.viewControllers[0] as MainNavigationController
 //
 //            return nil
     }

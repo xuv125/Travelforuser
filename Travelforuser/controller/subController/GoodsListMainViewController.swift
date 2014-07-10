@@ -19,19 +19,21 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         var height_unit:CGFloat = (self.view.frame.height - NavigationBar_HEIGHT) / 10
         
         self.goodsListTableView = GoodsListTableView(frame: CGRectMake(0, height_unit * 4, SCREEN_WIDTH, height_unit * 6), style: UITableViewStyle.Plain)
         self.goodsListTableView.delegate = self
         self.goodsListTableView.dataSource = self
         
-        self.view.addSubview(self.goodsListTableView)
+        self.goodsListTableView.registerClass(GoodsTableViewCell.self, forCellReuseIdentifier:"customCell")
+        
         
         LxNetHelperSharedInstance.delegate = self
         LxNetHelperSharedInstance.lxViewController = self
         
-        var strUrl = GetGoodsListAction + "?language_id=" + LanguageCode
-        LxNetHelperSharedInstance.GET(strUrl, success: successGoodsList, failure: failureGoodsList)
+        var strUrl = GetGoodsListAction + "?language=" + LanguageCode
+        LxNetHelperSharedInstance.GET(strUrl, success: successGoodsList, failure: failureGoodsList, isCheckNet: false)
         
     }
     
@@ -40,21 +42,48 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
-    func reFlash() {
-        
+    // セクション数
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 
+    //セクションの行数
     func tableView(tableView:UITableView!, numberOfRowsInSection section:Int) -> Int {
         return self.arrayList.count
     }
     
+    // セクション高さ
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return tableView.frame.height / 2
+    }
+    
     func tableView(tableView:UITableView!, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        var count:Int = self.arrayList.count
+        println("GoodsListMainViewController:tableView self.arrayList.count:\(self.arrayList.count)")
         
-        cell.text = "Row #\(indexPath.row)"
-        cell.detailTextLabel.text = "Subtitle #\(indexPath.row)"
+        let cell: GoodsTableViewCell = self.goodsListTableView.dequeueReusableCellWithIdentifier("customCell") as GoodsTableViewCell
+        
+        if count < 1 {
+            return cell
+        }
+        
+        var ret:CGRect = CGRectMake(0, 0, SCREEN_WIDTH, tableView.frame.height / 2)
+
+        if indexPath.row < count {
+            println(indexPath.row)
+            var entity:LxGoodsInfoEntity = self.arrayList[indexPath.row] as LxGoodsInfoEntity
+            
+            if false == entity.isEmpty {
+                //cell中身セット（引数　セル、indexPath）
+                cell.configureCell(ret, entity: entity, atIndexPath : indexPath)
+            }
+        }
         
         return cell
+    }
+    
+    func reFlash() {
+        
     }
     
     // #pragma mark - LxNetHelperDelegate
@@ -64,10 +93,15 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         
         for item:AnyObject in json {
             var nsdic:NSDictionary! = item as NSDictionary
-            var lxGoodsInfoEntity:LxGoodsInfoEntity = LxGoodsInfoEntity()
-            lxGoodsInfoEntity.initFormMap(nsdic)
-            self.arrayList.addObject(lxGoodsInfoEntity)
+            var entity:LxGoodsInfoEntity = LxGoodsInfoEntity()
+            entity.initFormMap(nsdic)
+            
+            println(entity.toString())
+            
+            self.arrayList.addObject(entity)
         }
+        
+        self.view.addSubview(self.goodsListTableView)
 
     }
     

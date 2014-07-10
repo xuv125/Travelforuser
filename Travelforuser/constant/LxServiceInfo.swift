@@ -43,13 +43,14 @@ let TimeOut:NSTimeInterval = 10.0
 //Web 根地址定义
 let WebRoot = "http://localhost:8080/pirateAllianceWeb/"
 let ServiceUrl = "http://localhost:8080/pirateAllianceWeb/"
+let GoodsImgUrl = "http://localhost:8080/pirateAllianceWeb/resource_img/goods/"
 
 //-------------------mail 定义-------------------------
 let to_mail = "XXXXX@qq.com"
 let bcc_mail = "xing_lun@hotmail.com"
 //-------------------mail 定义-------------------------
 
-//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language_id=en
+//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language=en
 //http://localhost:8080/pirateAllianceWeb/com/clearDeviceBadge.action?device_token=test1
 //http://localhost:8080/pirateAllianceWeb/com/userLogin.action?email=xing_lun@hotmail.com&password=12345678
 //-------------------Servlet 定义-------------------------

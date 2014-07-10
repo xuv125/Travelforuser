@@ -14,9 +14,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
     
     var goodstype_id:String = ""
     
-    var goods_area_id:String = ""
-    
-    var language_id:String = ""
+    var area_id:String = ""
     
     var status:Int = 0
     
@@ -48,8 +46,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         
         self.goods_id = mobj.valueForKey("goods_id") as String
         self.goodstype_id = mobj.valueForKey("goodstype_id") as String
-        self.goods_area_id = mobj.valueForKey("goods_area_id") as String
-        self.language_id = mobj.valueForKey("language_id") as String
+        self.area_id = mobj.valueForKey("area_id") as String
         self.status = mobj.valueForKey("status") as Int
         self.click_count = mobj.valueForKey("click_count") as Int
         self.is_hot = mobj.valueForKey("is_hot") as Bool
@@ -68,8 +65,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         
         entity.setValue(self.goods_id, forKey:"goods_id")
         entity.setValue(self.goodstype_id, forKey:"goodstype_id")
-        entity.setValue(self.goods_area_id, forKey:"goods_area_id")
-        entity.setValue(self.language_id, forKey:"language_id")
+        entity.setValue(self.area_id, forKey:"area_id")
         entity.setValue(self.status, forKey:"status")
         entity.setValue(self.click_count, forKey:"click_count")
         entity.setValue(self.is_hot, forKey:"is_hot")
@@ -87,8 +83,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         self.isEmpty = false
         self.goods_id = map.objectForKey("goods_id") as String
         self.goodstype_id = map.objectForKey("goodstype_id") as String
-        self.goods_area_id = map.objectForKey("goods_area_id") as String
-        self.language_id = map.objectForKey("language_id") as String
+        self.area_id = map.objectForKey("area_id") as String
         self.status = map.objectForKey("status") as Int
         self.click_count = map.objectForKey("click_count") as Int
         self.is_hot = map.objectForKey("is_hot") as Bool
@@ -106,8 +101,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         var entity:LxGoodsInfoEntity = baseEntity as LxGoodsInfoEntity
         self.goods_id = entity.goods_id
         self.goodstype_id = entity.goodstype_id
-        self.goods_area_id = entity.goods_area_id
-        self.language_id = entity.language_id
+        self.area_id = entity.area_id
         self.status = entity.status
         self.click_count = entity.click_count
         self.is_hot = entity.is_hot
@@ -123,8 +117,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         var str = super.toString()
         str += "goods_id:" + self.goods_id + "\n"
         str += "goodstype_id:" + self.goodstype_id + "\n"
-        str += "goods_area_id:" + self.goods_area_id + "\n"
-        str += "language_id:" + self.language_id + "\n"
+        str += "area_id:" + self.area_id + "\n"
         str += "status:\(self.status)" + "\n"
         str += "click_count:\(self.click_count)" + "\n"
         str += "is_hot:\(self.is_hot)" + "\n"
