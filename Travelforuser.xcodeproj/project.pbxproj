@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA02E599196D2622004847E0 /* placeholder-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = FA02E597196D2622004847E0 /* placeholder-avatar.png */; };
 		FA02E59A196D2622004847E0 /* placeholder-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA02E598196D2622004847E0 /* placeholder-avatar@2x.png */; };
+		FA193038196EC245007281C0 /* GoodsAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA193037196EC245007281C0 /* GoodsAreaView.swift */; };
 		FA221EB519639FAB00AFC777 /* LxNetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA221EB419639FAB00AFC777 /* LxNetHelper.swift */; };
 		FA221EB91963A91D00AFC777 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FA221EB81963A91D00AFC777 /* MBProgressHUD.m */; };
 		FA221EF71963E00700AFC777 /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = FA221EDB1963E00700AFC777 /* arrow-down.png */; };
@@ -119,6 +120,7 @@
 /* Begin PBXFileReference section */
 		FA02E597196D2622004847E0 /* placeholder-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder-avatar.png"; path = "Images/placeholder-avatar.png"; sourceTree = "<group>"; };
 		FA02E598196D2622004847E0 /* placeholder-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder-avatar@2x.png"; path = "Images/placeholder-avatar@2x.png"; sourceTree = "<group>"; };
+		FA193037196EC245007281C0 /* GoodsAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaView.swift; path = view/subView/GoodsAreaView.swift; sourceTree = "<group>"; };
 		FA1DDD0F195D3A150030AD85 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		FA221EB419639FAB00AFC777 /* LxNetHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxNetHelper.swift; path = Networks/LxNetHelper.swift; sourceTree = "<group>"; };
 		FA221EB71963A91D00AFC777 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = UI/HUD/MBProgressHUD.h; sourceTree = "<group>"; };
@@ -585,6 +587,7 @@
 				FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */,
 				FA8D18F3196E97010073FCBD /* GoodsAreaTableViewCell.swift */,
 				FA8D18F5196E97350073FCBD /* GoodsAreaScrollView.swift */,
+				FA193037196EC245007281C0 /* GoodsAreaView.swift */,
 			);
 			name = subView;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				FA327B6E196BC84F000B17C6 /* PhotoCell.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
 				FA8FD16C196CE09400D6F7B6 /* LxbaseLabel.swift in Sources */,
+				FA193038196EC245007281C0 /* GoodsAreaView.swift in Sources */,
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
 				FA460D36195ACAB1004F9C2A /* LxAPPContainer.swift in Sources */,
 				FA460D7F195ACBF0004F9C2A /* AFNetworkActivityIndicatorManager.m in Sources */,

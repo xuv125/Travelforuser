@@ -16,8 +16,11 @@ class GoodsTableViewCell: LxbaseTableViewCell {
     
     var lxGoodsInfoEntity:LxGoodsInfoEntity = LxGoodsInfoEntity()
     
-    func configureCell(frame: CGRect, entity:LxGoodsInfoEntity!, atIndexPath indexPath: NSIndexPath) -> Bool {
-        self.frame = frame
+    override func configure(frame: CGRect, entity:LxbaseEntity!, atIndexPath indexPath: NSIndexPath) -> Bool {
+        var result:Bool = super.configure(frame, entity: entity, atIndexPath : indexPath)
+        if false == result {
+            return false
+        }
         
         var width_unit:CGFloat = self.frame.width / 32
         var height_unit:CGFloat = self.frame.height / 20

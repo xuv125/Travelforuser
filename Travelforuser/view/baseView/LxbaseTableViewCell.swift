@@ -9,5 +9,17 @@
 import UIKit
 
 class LxbaseTableViewCell: UITableViewCell {
+    
+    var indexPath: NSIndexPath?
 
+    func configure(frame: CGRect, entity:LxbaseEntity!, atIndexPath indexPath: NSIndexPath) -> Bool {
+        self.indexPath = indexPath
+        
+        self.frame = frame
+        
+        if true == entity.isEmpty {
+            return false
+        }
+        return true
+    }
 }

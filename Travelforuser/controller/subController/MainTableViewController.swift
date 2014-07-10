@@ -9,10 +9,6 @@
 import UIKit
 
 class MainTableViewController: LxbaseTableViewController {
-//    var goodsScrollView:GoodsScrollView!
-//    var goodsListTableView:GoodsListTableView!
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,32 +40,34 @@ class MainTableViewController: LxbaseTableViewController {
     
     // セクション高さ
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return tableView.frame.height / 2
+        return tableView.frame.height / 3
     }
     
     override func tableView(tableView:UITableView!, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
         var count:Int = self.arrayList.count
         println("MainTableViewController:tableView self.arrayList.count:\(self.arrayList.count)")
         
-        let cell: GoodsTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customCell") as GoodsTableViewCell
+        var ret:CGRect = CGRectMake(0, 0, SCREEN_WIDTH, tableView.frame.height / 3)
         
-        if count < 1 {
+        if 0 == indexPath.row {
+            let cell:GoodsAreaTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("scrollCell") as GoodsAreaTableViewCell
+            
+            return cell
+        } else {
+        
+            let cell:GoodsTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customCell") as GoodsTableViewCell
+        
+            if indexPath.row < count {
+                println(indexPath.row)
+                var entity:LxGoodsInfoEntity = self.arrayList[indexPath.row] as LxGoodsInfoEntity
+            
+                if false == entity.isEmpty {
+                    //cell中身セット（引数　セル、indexPath）
+                    cell.configure(ret, entity: entity, atIndexPath : indexPath)
+                }
+            }
             return cell
         }
-        
-        var ret:CGRect = CGRectMake(0, 0, SCREEN_WIDTH, tableView.frame.height / 2)
-        
-        if indexPath.row < count {
-            println(indexPath.row)
-            var entity:LxGoodsInfoEntity = self.arrayList[indexPath.row] as LxGoodsInfoEntity
-            
-            if false == entity.isEmpty {
-                //cell中身セット（引数　セル、indexPath）
-                cell.configureCell(ret, entity: entity, atIndexPath : indexPath)
-            }
-        }
-        
-        return cell
     }
 
     /*

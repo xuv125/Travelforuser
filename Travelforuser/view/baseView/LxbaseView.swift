@@ -9,6 +9,8 @@
 import UIKit
 
 class LxbaseView: UIView {
+    
+    var indexPath: NSIndexPath?
 
     init(coder aDecoder: NSCoder!)
     {
@@ -29,4 +31,14 @@ class LxbaseView: UIView {
     }
     */
 
+    func configure(frame: CGRect, entity:LxbaseEntity!, atIndexPath indexPath: NSIndexPath) -> Bool {
+        self.indexPath = indexPath
+        
+        self.frame = frame
+        
+        if true == entity.isEmpty {
+            return false
+        }
+        return true
+    }
 }

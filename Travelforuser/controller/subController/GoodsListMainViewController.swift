@@ -81,7 +81,7 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
             
             if false == entity.isEmpty {
                 //cell中身セット（引数　セル、indexPath）
-                cell.configureCell(ret, entity: entity, atIndexPath : indexPath)
+                cell.configure(ret, entity: entity, atIndexPath : indexPath)
             }
         }
         
