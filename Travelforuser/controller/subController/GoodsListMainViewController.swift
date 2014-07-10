@@ -11,6 +11,7 @@ import UIKit
 class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UITableViewDataSource {
     var goodsScrollView:GoodsScrollView!
     var goodsListTableView:GoodsListTableView!
+    var refreshControl:UIRefreshControl!
     
     var arrayList:NSMutableArray = NSMutableArray()
     var isRefreshTable:Bool = false
@@ -19,7 +20,6 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         var height_unit:CGFloat = (self.view.frame.height - NavigationBar_HEIGHT) / 10
         
         self.goodsListTableView = GoodsListTableView(frame: CGRectMake(0, height_unit * 4, SCREEN_WIDTH, height_unit * 6), style: UITableViewStyle.Plain)
@@ -28,6 +28,12 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         
         self.goodsListTableView.registerClass(GoodsTableViewCell.self, forCellReuseIdentifier:"customCell")
         
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
+        
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.goodsListTableView.addSubview(refreshControl)
         
         LxNetHelperSharedInstance.delegate = self
         LxNetHelperSharedInstance.lxViewController = self
@@ -82,8 +88,14 @@ class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UI
         return cell
     }
     
-    func reFlash() {
-        
+    func refresh(refresh:UIRefreshControl) {
+        refresh.beginRefreshing()
+        refresh.attributedTitle = NSAttributedString(string: "Loading...")
+        var formatter:NSDateFormatter = NSDateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        var lastUpdated:String = formatter.stringFromDate(NSDate.date())
+        refresh.attributedTitle = NSAttributedString(string: lastUpdated)
+        refresh.endRefreshing()
     }
     
     // #pragma mark - LxNetHelperDelegate

@@ -42,38 +42,39 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="EEe-DC-ffX" kind="relationship" relationship="rootViewController" id="Vzs-Ix-5eR"/>
+                        <segue destination="xGB-9d-id6" kind="relationship" relationship="rootViewController" id="LFS-0k-RoZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lp-d7-Tpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61" y="-441"/>
         </scene>
-        <!--Goods List Main View Controller - 選択-->
-        <scene sceneID="9QC-1j-N7l">
+        <!--Main Table View Controller-->
+        <scene sceneID="Xwh-PN-rUS">
             <objects>
-                <viewController id="EEe-DC-ffX" customClass="GoodsListMainViewController" customModule="Travelforuser" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JEx-ao-MYG"/>
-                        <viewControllerLayoutGuide type="bottom" id="iVS-02-ZuB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="urb-Ql-IRa">
+                <tableViewController id="xGB-9d-id6" customClass="MainTableViewController" customModule="Travelforuser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="cU3-MN-2VC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gdu-nJ-eit" customClass="GoodsScrollView" customModule="Travelforuser" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="65" width="320" height="142"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="選択" id="wWg-CP-Ke4">
-                        <barButtonItem key="backBarButtonItem" title="メニュー" id="CAN-6z-H8f"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lHD-nm-0PL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="HLW-TO-Qbm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HLW-TO-Qbm" id="Pgm-HL-2sn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xGB-9d-id6" id="MIN-wL-Mmn"/>
+                            <outlet property="delegate" destination="xGB-9d-id6" id="FkY-4o-Fa2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hKh-Wf-gwF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeS-t2-5FX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="-443"/>
+            <point key="canvasLocation" x="527" y="-441"/>
         </scene>
         <!--Main Split View Controller-->
         <scene sceneID="Gza-rU-hSB">

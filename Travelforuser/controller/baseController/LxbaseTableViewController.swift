@@ -8,8 +8,10 @@
 
 import UIKit
 
-class LxbaseTableViewController: UITableViewController {
-
+class LxbaseTableViewController: UITableViewController, MBProgressHUDDelegate, LxNetHelperDelegate {
+    var arrayList:NSMutableArray = NSMutableArray()
+    var isRefreshTable:Bool = false
+    
     init(coder aDecoder: NSCoder!)
     {
         super.init(coder: aDecoder)
@@ -40,13 +42,13 @@ class LxbaseTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.arrayList.count
     }
 
     /*
@@ -104,4 +106,30 @@ class LxbaseTableViewController: UITableViewController {
     }
     */
 
+    
+    // #pragma mark - LxNetHelperDelegate
+    func showHUD() {
+        self.addHUDView("network_conn_failed", imgName:"nosmoke.png")
+    }
+    
+    // #pragma mark - MBProgressHUDDelegate
+    func addHUDView(message:String, imgName:String) {
+        //自定义view
+        var HUD:MBProgressHUD = MBProgressHUD()
+        self.view.addSubview(HUD)
+        let img:UIImage = UIImage(named:imgName)
+        var imageView:UIImageView = UIImageView(image:img)
+        HUD.customView = imageView
+        
+        
+        // Set custom view mode
+        HUD.mode = MBProgressHUDModeCustomView
+        HUD.delegate = self
+        HUD.labelText = NSLocalizedString(message, comment: "")
+        
+        println("HUD.labelText:" + HUD.labelText)
+        
+        HUD.show(true)
+        HUD.hide(true, afterDelay: 1)
+    }
 }

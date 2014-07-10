@@ -93,11 +93,12 @@
 		FA5FD1E219654179002D2F40 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E119654179002D2F40 /* MainView.swift */; };
 		FA5FD1E4196541DB002D2F40 /* LxbaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */; };
 		FA5FD1E6196541F8002D2F40 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */; };
+		FA8D18F0196E953C0073FCBD /* GoodsAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */; };
+		FA8D18F2196E95FA0073FCBD /* GoodsAreaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */; };
 		FA8FD15C196CD27300D6F7B6 /* GoodsListMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15B196CD27300D6F7B6 /* GoodsListMainViewController.swift */; };
 		FA8FD15E196CD2C400D6F7B6 /* LxbaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15D196CD2C400D6F7B6 /* LxbaseScrollView.swift */; };
 		FA8FD160196CD2F900D6F7B6 /* LxbaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15F196CD2F900D6F7B6 /* LxbaseTableViewCell.swift */; };
 		FA8FD162196CD34B00D6F7B6 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD161196CD34B00D6F7B6 /* GoodsTableViewCell.swift */; };
-		FA8FD164196CD37B00D6F7B6 /* GoodsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD163196CD37B00D6F7B6 /* GoodsScrollView.swift */; };
 		FA8FD166196CD93200D6F7B6 /* GoodsListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD165196CD93200D6F7B6 /* GoodsListTableView.swift */; };
 		FA8FD168196CDDC600D6F7B6 /* LxbaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD167196CDDC600D6F7B6 /* LxbaseImageView.swift */; };
 		FA8FD16A196CDF7000D6F7B6 /* LxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */; };
@@ -232,11 +233,12 @@
 		FA5FD1E119654179002D2F40 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = view/subView/MainView.swift; sourceTree = "<group>"; };
 		FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableViewController.swift; path = controller/baseController/LxbaseTableViewController.swift; sourceTree = "<group>"; };
 		FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = controller/subController/MainTableViewController.swift; sourceTree = "<group>"; };
+		FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaTableViewCell.swift; path = view/subView/GoodsAreaTableViewCell.swift; sourceTree = "<group>"; };
+		FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaScrollView.swift; path = view/subView/GoodsAreaScrollView.swift; sourceTree = "<group>"; };
 		FA8FD15B196CD27300D6F7B6 /* GoodsListMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListMainViewController.swift; path = controller/subController/GoodsListMainViewController.swift; sourceTree = "<group>"; };
 		FA8FD15D196CD2C400D6F7B6 /* LxbaseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseScrollView.swift; path = view/baseView/LxbaseScrollView.swift; sourceTree = "<group>"; };
 		FA8FD15F196CD2F900D6F7B6 /* LxbaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableViewCell.swift; path = view/baseView/LxbaseTableViewCell.swift; sourceTree = "<group>"; };
 		FA8FD161196CD34B00D6F7B6 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsTableViewCell.swift; path = view/subView/GoodsTableViewCell.swift; sourceTree = "<group>"; };
-		FA8FD163196CD37B00D6F7B6 /* GoodsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsScrollView.swift; path = view/subView/GoodsScrollView.swift; sourceTree = "<group>"; };
 		FA8FD165196CD93200D6F7B6 /* GoodsListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListTableView.swift; path = view/subView/GoodsListTableView.swift; sourceTree = "<group>"; };
 		FA8FD167196CDDC600D6F7B6 /* LxbaseImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseImageView.swift; path = view/baseView/LxbaseImageView.swift; sourceTree = "<group>"; };
 		FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxImageView.swift; path = view/subView/LxImageView.swift; sourceTree = "<group>"; };
@@ -579,9 +581,10 @@
 				FA5FD1E119654179002D2F40 /* MainView.swift */,
 				FA327B6D196BC84F000B17C6 /* PhotoCell.swift */,
 				FA8FD161196CD34B00D6F7B6 /* GoodsTableViewCell.swift */,
-				FA8FD163196CD37B00D6F7B6 /* GoodsScrollView.swift */,
 				FA8FD165196CD93200D6F7B6 /* GoodsListTableView.swift */,
 				FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */,
+				FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */,
+				FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */,
 			);
 			name = subView;
 			sourceTree = "<group>";
@@ -766,7 +769,6 @@
 				FA8FD15E196CD2C400D6F7B6 /* LxbaseScrollView.swift in Sources */,
 				FA327B6E196BC84F000B17C6 /* PhotoCell.swift in Sources */,
 				FA460D4D195ACB8D004F9C2A /* String.swift in Sources */,
-				FA8FD164196CD37B00D6F7B6 /* GoodsScrollView.swift in Sources */,
 				FA8FD16C196CE09400D6F7B6 /* LxbaseLabel.swift in Sources */,
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
 				FA460D36195ACAB1004F9C2A /* LxAPPContainer.swift in Sources */,
@@ -792,6 +794,7 @@
 				FA327B66196B7D0F000B17C6 /* AppInfoDBAccessor.swift in Sources */,
 				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
 				FA5D51B0196A651200A308AD /* LxGoodsInfoEntity.swift in Sources */,
+				FA8D18F0196E953C0073FCBD /* GoodsAreaTableViewCell.swift in Sources */,
 				FA5FD1D819652B7F002D2F40 /* MainNavigationController.swift in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -815,6 +818,7 @@
 				FA5FD1D0196522B3002D2F40 /* MainViewController.swift in Sources */,
 				FA8FD166196CD93200D6F7B6 /* GoodsListTableView.swift in Sources */,
 				FA460D81195ACBF0004F9C2A /* UIAlertView+AFNetworking.m in Sources */,
+				FA8D18F2196E95FA0073FCBD /* GoodsAreaScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ class LxNetHelper:NSObject {
     
     var delegate:LxNetHelperDelegate?
     
-    var lxViewController:LxbaseViewController?
+    var lxViewController:UIViewController?
     
     init() {
         AFNetworkReachabilityManager.sharedManager().startMonitoring()
