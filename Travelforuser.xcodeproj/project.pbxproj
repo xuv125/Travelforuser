@@ -93,8 +93,8 @@
 		FA5FD1E219654179002D2F40 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E119654179002D2F40 /* MainView.swift */; };
 		FA5FD1E4196541DB002D2F40 /* LxbaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */; };
 		FA5FD1E6196541F8002D2F40 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */; };
-		FA8D18F0196E953C0073FCBD /* GoodsAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */; };
-		FA8D18F2196E95FA0073FCBD /* GoodsAreaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */; };
+		FA8D18F4196E97010073FCBD /* GoodsAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18F3196E97010073FCBD /* GoodsAreaTableViewCell.swift */; };
+		FA8D18F6196E97350073FCBD /* GoodsAreaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D18F5196E97350073FCBD /* GoodsAreaScrollView.swift */; };
 		FA8FD15C196CD27300D6F7B6 /* GoodsListMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15B196CD27300D6F7B6 /* GoodsListMainViewController.swift */; };
 		FA8FD15E196CD2C400D6F7B6 /* LxbaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15D196CD2C400D6F7B6 /* LxbaseScrollView.swift */; };
 		FA8FD160196CD2F900D6F7B6 /* LxbaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD15F196CD2F900D6F7B6 /* LxbaseTableViewCell.swift */; };
@@ -233,8 +233,8 @@
 		FA5FD1E119654179002D2F40 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = view/subView/MainView.swift; sourceTree = "<group>"; };
 		FA5FD1E3196541DB002D2F40 /* LxbaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableViewController.swift; path = controller/baseController/LxbaseTableViewController.swift; sourceTree = "<group>"; };
 		FA5FD1E5196541F8002D2F40 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = controller/subController/MainTableViewController.swift; sourceTree = "<group>"; };
-		FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaTableViewCell.swift; path = view/subView/GoodsAreaTableViewCell.swift; sourceTree = "<group>"; };
-		FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaScrollView.swift; path = view/subView/GoodsAreaScrollView.swift; sourceTree = "<group>"; };
+		FA8D18F3196E97010073FCBD /* GoodsAreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaTableViewCell.swift; path = view/subView/GoodsAreaTableViewCell.swift; sourceTree = "<group>"; };
+		FA8D18F5196E97350073FCBD /* GoodsAreaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsAreaScrollView.swift; path = view/subView/GoodsAreaScrollView.swift; sourceTree = "<group>"; };
 		FA8FD15B196CD27300D6F7B6 /* GoodsListMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListMainViewController.swift; path = controller/subController/GoodsListMainViewController.swift; sourceTree = "<group>"; };
 		FA8FD15D196CD2C400D6F7B6 /* LxbaseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseScrollView.swift; path = view/baseView/LxbaseScrollView.swift; sourceTree = "<group>"; };
 		FA8FD15F196CD2F900D6F7B6 /* LxbaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseTableViewCell.swift; path = view/baseView/LxbaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -583,8 +583,8 @@
 				FA8FD161196CD34B00D6F7B6 /* GoodsTableViewCell.swift */,
 				FA8FD165196CD93200D6F7B6 /* GoodsListTableView.swift */,
 				FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */,
-				FA8D18EF196E953C0073FCBD /* GoodsAreaTableViewCell.swift */,
-				FA8D18F1196E95FA0073FCBD /* GoodsAreaScrollView.swift */,
+				FA8D18F3196E97010073FCBD /* GoodsAreaTableViewCell.swift */,
+				FA8D18F5196E97350073FCBD /* GoodsAreaScrollView.swift */,
 			);
 			name = subView;
 			sourceTree = "<group>";
@@ -781,6 +781,7 @@
 				FA8FD160196CD2F900D6F7B6 /* LxbaseTableViewCell.swift in Sources */,
 				FA8FD16A196CDF7000D6F7B6 /* LxImageView.swift in Sources */,
 				FA460D4A195ACB69004F9C2A /* LxUserInfoEntity.swift in Sources */,
+				FA8D18F6196E97350073FCBD /* GoodsAreaScrollView.swift in Sources */,
 				FA327B70196BCD78000B17C6 /* LxbaseCollectionViewController.swift in Sources */,
 				FA460D68195ACBDC004F9C2A /* AFNetworkReachabilityManager.m in Sources */,
 				FA5FD1D2196529B5002D2F40 /* LxbaseSplitViewController.swift in Sources */,
@@ -794,7 +795,6 @@
 				FA327B66196B7D0F000B17C6 /* AppInfoDBAccessor.swift in Sources */,
 				FA2DF6BA195BB030001269D8 /* MainTestViewController.swift in Sources */,
 				FA5D51B0196A651200A308AD /* LxGoodsInfoEntity.swift in Sources */,
-				FA8D18F0196E953C0073FCBD /* GoodsAreaTableViewCell.swift in Sources */,
 				FA5FD1D819652B7F002D2F40 /* MainNavigationController.swift in Sources */,
 				FA460D6C195ACBDC004F9C2A /* AFURLResponseSerialization.m in Sources */,
 				FA460D85195ACBF0004F9C2A /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -818,7 +818,7 @@
 				FA5FD1D0196522B3002D2F40 /* MainViewController.swift in Sources */,
 				FA8FD166196CD93200D6F7B6 /* GoodsListTableView.swift in Sources */,
 				FA460D81195ACBF0004F9C2A /* UIAlertView+AFNetworking.m in Sources */,
-				FA8D18F2196E95FA0073FCBD /* GoodsAreaScrollView.swift in Sources */,
+				FA8D18F4196E97010073FCBD /* GoodsAreaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

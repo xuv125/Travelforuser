@@ -1,5 +1,5 @@
 //
-//  GoodsGroupTableViewCell.swift
+//  GoodsAreaTableViewCell.swift
 //  Travelforuser
 //
 //  Created by 倫星 on 2014/07/10.
@@ -39,8 +39,8 @@ class GoodsAreaTableViewCell: LxbaseTableViewCell {
             return false
         }
         
-//        self.lxGoodsInfoEntity.copyEntity(entity)
-//        self.goods_img_ImageView.GET(GoodsImgUrl + self.lxGoodsInfoEntity.goods_img, success:successGetImage, failure:failureGetImage)
+        //        self.lxGoodsInfoEntity.copyEntity(entity)
+        //        self.goods_img_ImageView.GET(GoodsImgUrl + self.lxGoodsInfoEntity.goods_img, success:successGetImage, failure:failureGetImage)
         return true
     }
 }

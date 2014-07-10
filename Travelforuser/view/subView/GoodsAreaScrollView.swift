@@ -1,5 +1,5 @@
 //
-//  GoodsGroupScrollView.swift
+//  GoodsAreaScrollView.swift
 //  Travelforuser
 //
 //  Created by 倫星 on 2014/07/10.

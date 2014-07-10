@@ -9,7 +9,7 @@
 import UIKit
 
 class MainTableViewController: LxbaseTableViewController {
-    var goodsScrollView:GoodsScrollView!
+//    var goodsScrollView:GoodsScrollView!
 //    var goodsListTableView:GoodsListTableView!
     
 

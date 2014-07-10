@@ -9,7 +9,7 @@
 import UIKit
 
 class GoodsListMainViewController: LxbaseViewController, UITableViewDelegate, UITableViewDataSource {
-    var goodsScrollView:GoodsScrollView!
+//    var goodsScrollView:GoodsScrollView!
     var goodsListTableView:GoodsListTableView!
     var refreshControl:UIRefreshControl!
     
