@@ -44,19 +44,21 @@ let TimeOut:NSTimeInterval = 10.0
 let WebRoot = "http://localhost:8080/pirateAllianceWeb/"
 let ServiceUrl = "http://localhost:8080/pirateAllianceWeb/"
 let GoodsImgUrl = "http://localhost:8080/pirateAllianceWeb/resource_img/goods/"
+let AreaImgUrl = "http://localhost:8080/pirateAllianceWeb/resource_img/area/"
 
 //-------------------mail 定义-------------------------
 let to_mail = "XXXXX@qq.com"
 let bcc_mail = "xing_lun@hotmail.com"
 //-------------------mail 定义-------------------------
 
-//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language=en
+//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language_id=en
 //http://localhost:8080/pirateAllianceWeb/com/clearDeviceBadge.action?device_token=test1
 //http://localhost:8080/pirateAllianceWeb/com/userLogin.action?email=xing_lun@hotmail.com&password=12345678
 //-------------------Servlet 定义-------------------------
 let UserRegisterAction = ServiceUrl + "com/userRegister.action"
 let GetUserInfoAction = ServiceUrl + "com/userLogin.action"
 let GetGoodsListAction = ServiceUrl + "com/getGoodsInfoList.action"
+let GetAreaListAction = ServiceUrl + "com/getAreaInfoList.action"
 let SetApnsInfoAction = ServiceUrl + "com/setApnsInfo.action"
 let ClearDeviceBadgeAction = ServiceUrl + "com/clearDeviceBadge.action"
 //........add

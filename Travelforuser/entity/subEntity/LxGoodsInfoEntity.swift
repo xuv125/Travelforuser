@@ -24,6 +24,8 @@ class LxGoodsInfoEntity: LxbaseEntity {
     
     var is_new:Bool = false
     
+    var language_id:String = ""
+    
     var name:String = ""
     
     var descriptionx:String = ""
@@ -51,6 +53,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         self.click_count = mobj.valueForKey("click_count") as Int
         self.is_hot = mobj.valueForKey("is_hot") as Bool
         self.is_new = mobj.valueForKey("is_new") as Bool
+        self.language_id = mobj.valueForKey("language_id") as String
         self.name = mobj.valueForKey("name") as String
         self.descriptionx = mobj.valueForKey("descriptionx") as String
         self.price = mobj.valueForKey("price") as Float
@@ -70,6 +73,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         entity.setValue(self.click_count, forKey:"click_count")
         entity.setValue(self.is_hot, forKey:"is_hot")
         entity.setValue(self.is_new, forKey:"is_new")
+        entity.setValue(self.language_id, forKey:"language_id")
         entity.setValue(self.name, forKey:"name")
         entity.setValue(self.descriptionx, forKey:"descriptionx")
         entity.setValue(self.price, forKey:"price")
@@ -88,6 +92,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         self.click_count = map.objectForKey("click_count") as Int
         self.is_hot = map.objectForKey("is_hot") as Bool
         self.is_new = map.objectForKey("is_new") as Bool
+        self.language_id = map.objectForKey("language_id") as String
         self.name = map.objectForKey("name") as String
         self.descriptionx = map.objectForKey("descriptionx") as String
         self.price = map.objectForKey("price") as Float
@@ -106,6 +111,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         self.click_count = entity.click_count
         self.is_hot = entity.is_hot
         self.is_new = entity.is_new
+        self.language_id = entity.language_id
         self.name = entity.name
         self.descriptionx = entity.descriptionx
         self.price = entity.price
@@ -122,6 +128,7 @@ class LxGoodsInfoEntity: LxbaseEntity {
         str += "click_count:\(self.click_count)" + "\n"
         str += "is_hot:\(self.is_hot)" + "\n"
         str += "is_new:\(self.is_new)" + "\n"
+        str += "language_id:" + self.language_id + "\n"
         str += "name:" + self.name + "\n"
         str += "descriptionx:" + self.descriptionx + "\n"
         str += "goods_id:" + self.goods_id + "\n"

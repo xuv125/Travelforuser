@@ -17,6 +17,7 @@ class MainTableViewController: LxbaseTableViewController {
         
         var height_unit:CGFloat = (self.view.frame.height - NavigationBar_HEIGHT) / 10
         
+        self.tableView.registerClass(GoodsAreaTableViewCell.self, forCellReuseIdentifier:"scrollCell")
         self.tableView.registerClass(GoodsTableViewCell.self, forCellReuseIdentifier:"customCell")
         
         
@@ -29,7 +30,7 @@ class MainTableViewController: LxbaseTableViewController {
         LxNetHelperSharedInstance.delegate = self
         LxNetHelperSharedInstance.lxViewController = self
         
-        var strUrl = GetGoodsListAction + "?language=" + LanguageCode
+        var strUrl = GetGoodsListAction + "?language_id=" + LanguageCode
         LxNetHelperSharedInstance.GET(strUrl, success: successGoodsList, failure: failureGoodsList, isCheckNet: false)
     }
 
