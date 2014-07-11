@@ -53,6 +53,11 @@ class MainTableViewController: LxbaseTableViewController {
         if 0 == indexPath.row {
             let cell:GoodsAreaTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("scrollCell") as GoodsAreaTableViewCell
             
+            var entity:LxbaseEntity = LxbaseEntity()
+            entity.isEmpty = false
+            
+            cell.configure(ret, entity: entity, atIndexPath : indexPath)
+            
             return cell
         } else {
         
@@ -106,7 +111,6 @@ class MainTableViewController: LxbaseTableViewController {
             self.arrayList.addObject(entity)
         }
         self.tableView.reloadData()
-//        self.view.addSubview(self.tableView)
         
     }
     
