@@ -51,15 +51,22 @@ let to_mail = "XXXXX@qq.com"
 let bcc_mail = "xing_lun@hotmail.com"
 //-------------------mail 定义-------------------------
 
-//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language_id=en
-//http://localhost:8080/pirateAllianceWeb/com/clearDeviceBadge.action?device_token=test1
-//http://localhost:8080/pirateAllianceWeb/com/userLogin.action?email=xing_lun@hotmail.com&password=12345678
 //-------------------Servlet 定义-------------------------
 let UserRegisterAction = ServiceUrl + "com/userRegister.action"
+
+//http://localhost:8080/pirateAllianceWeb/com/userLogin.action?email=xing_lun@hotmail.com&password=12345678
 let GetUserInfoAction = ServiceUrl + "com/userLogin.action"
+
+//http://localhost:8080/pirateAllianceWeb/com/getGoodsInfoList.action?language_id=en
 let GetGoodsListAction = ServiceUrl + "com/getGoodsInfoList.action"
+
+//http://localhost:8080/pirateAllianceWeb/com/getAreaInfoList.action?language_id=en&level=1
 let GetAreaListAction = ServiceUrl + "com/getAreaInfoList.action"
+
+
 let SetApnsInfoAction = ServiceUrl + "com/setApnsInfo.action"
+
+//http://localhost:8080/pirateAllianceWeb/com/clearDeviceBadge.action?device_token=test1
 let ClearDeviceBadgeAction = ServiceUrl + "com/clearDeviceBadge.action"
 //........add
 //-------------------Servlet 定义-------------------------

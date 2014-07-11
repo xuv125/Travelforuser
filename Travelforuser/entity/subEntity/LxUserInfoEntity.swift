@@ -11,27 +11,49 @@ import CoreData
 class LxUserInfoEntity: LxbaseEntity {
     
     var account_id:String = ""
+    
     var create_time:String = ""
+    
     var email:String = ""
+    
     var golden_coin_id:String = ""
+    
     var golden_coin:Int = 0
+    
     var last_login_time:String = ""
+    
     var login_count:Int = 0
+    
     var login_time:String = ""
+    
     var name_en_family:String = ""
+    
     var name_en_middle:String = ""
+    
     var name_en_last:String = ""
+    
     var name_kanji_sei:String = ""
+    
     var name_kanji_mei:String = ""
+    
     var name_katakana_sei:String = ""
+    
     var name_katakana_mei:String = ""
+    
     var password:String = ""
+    
     var shop_id:String = ""
+    
     var silver_coin_id:String = ""
+    
     var silver_coin:Int = 0
+    
     var status:Int = 0
+    
     var tel:String = ""
+    
     var update_time:String = ""
+    
     var user_id:String = ""
     
     init() {

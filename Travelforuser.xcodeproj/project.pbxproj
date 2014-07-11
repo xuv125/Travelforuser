@@ -105,6 +105,7 @@
 		FA8FD16A196CDF7000D6F7B6 /* LxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */; };
 		FA8FD16C196CE09400D6F7B6 /* LxbaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD16B196CE09400D6F7B6 /* LxbaseLabel.swift */; };
 		FA8FD170196CE24200D6F7B6 /* LxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD16F196CE24200D6F7B6 /* LxLabel.swift */; };
+		FAE9AF6A196FBE410024091D /* LxAreaInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9AF69196FBE410024091D /* LxAreaInfoEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,7 @@
 		FA8FD169196CDF7000D6F7B6 /* LxImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxImageView.swift; path = view/subView/LxImageView.swift; sourceTree = "<group>"; };
 		FA8FD16B196CE09400D6F7B6 /* LxbaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxbaseLabel.swift; path = view/baseView/LxbaseLabel.swift; sourceTree = "<group>"; };
 		FA8FD16F196CE24200D6F7B6 /* LxLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxLabel.swift; path = view/subView/LxLabel.swift; sourceTree = "<group>"; };
+		FAE9AF69196FBE410024091D /* LxAreaInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LxAreaInfoEntity.swift; path = entity/subEntity/LxAreaInfoEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,6 +480,7 @@
 				FA460D47195ACB69004F9C2A /* LxAppInfoEntity.swift */,
 				FA460D48195ACB69004F9C2A /* LxUserInfoEntity.swift */,
 				FA5D51AF196A651200A308AD /* LxGoodsInfoEntity.swift */,
+				FAE9AF69196FBE410024091D /* LxAreaInfoEntity.swift */,
 			);
 			name = subEntity;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				FA460D46195ACB60004F9C2A /* LxbaseEntity.swift in Sources */,
 				FA460D36195ACAB1004F9C2A /* LxAPPContainer.swift in Sources */,
 				FA460D7F195ACBF0004F9C2A /* AFNetworkActivityIndicatorManager.m in Sources */,
+				FAE9AF6A196FBE410024091D /* LxAreaInfoEntity.swift in Sources */,
 				FA460D6D195ACBDC004F9C2A /* AFURLSessionManager.m in Sources */,
 				FA5FD1DC196540A5002D2F40 /* LxbaseTableView.swift in Sources */,
 				FA5FD1E019654147002D2F40 /* LxbaseView.swift in Sources */,

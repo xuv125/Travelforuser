@@ -11,6 +11,7 @@ import CoreData
 class LxAppInfoEntity: LxbaseEntity {
     
     var name:String = ""
+    
     var version:String = ""
     
     init() {
