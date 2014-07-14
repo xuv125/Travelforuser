@@ -17,6 +17,8 @@ class GoodsAreaTableViewCell: LxbaseTableViewCell {
         }
         
         self.goodsAreaScrollView = GoodsAreaScrollView(frame: frame)
+        self.contentView.addSubview(self.goodsAreaScrollView)
+        
         return true
     }
 }

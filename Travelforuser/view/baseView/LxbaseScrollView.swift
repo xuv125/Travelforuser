@@ -27,6 +27,7 @@ class LxbaseScrollView: UIScrollView {
         // Initialization code
         //按页滚动，总是一次一个宽度，或一个高度单位的滚动
         self.pagingEnabled = true
+        self.bounces = false
         
         self.frame = frame
     }

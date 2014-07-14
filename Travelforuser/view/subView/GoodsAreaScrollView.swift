@@ -23,6 +23,12 @@ class GoodsAreaScrollView: LxbaseScrollView {
         
         self.arrayList.removeAllObjects()
         
+        println(self.bounds.width)
+        println(self.bounds.height)
+        
+        println(self.frame.width)
+        println(self.frame.height)
+        
         var json:NSArray = responseObject as NSArray
         
         var inde:Int = 0

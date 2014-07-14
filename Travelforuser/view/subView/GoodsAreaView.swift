@@ -28,21 +28,21 @@ class GoodsAreaView: LxbaseView {
         var height_unit:CGFloat = self.frame.height / 20
         
         self.area_img_ImageView = LxImageView(frame: self.frame)
-        self.addSubview(area_img_ImageView)
+        self.addSubview(self.area_img_ImageView)
         
         self.name_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 14, width_unit * 15, height_unit))
         self.name_Label.backgroundColor = UIColor.clearColor()
         self.name_Label.textColor = UIColor.whiteColor()
         self.name_Label.textAlignment = NSTextAlignment.Right
         self.name_Label.font = UIFont.systemFontOfSize(8)
-        self.addSubview(name_Label)
+        self.addSubview(self.name_Label)
         
         self.descriptionx_Label = LxLabel(frame: CGRectMake(width_unit, height_unit * 16, width_unit * 20, height_unit))
         self.descriptionx_Label.backgroundColor = UIColor.clearColor()
         self.descriptionx_Label.textColor = UIColor.whiteColor()
         self.descriptionx_Label.textAlignment = NSTextAlignment.Right
         self.descriptionx_Label.font = UIFont.systemFontOfSize(8)
-        self.addSubview(descriptionx_Label)
+        self.addSubview(self.descriptionx_Label)
     }
     
     override func configure(entity:LxbaseEntity!) -> Bool {
@@ -52,6 +52,8 @@ class GoodsAreaView: LxbaseView {
         }
         
         self.lxAreaInfoEntity.copyEntity(entity)
+        var img_path:String = AreaImgUrl + self.lxAreaInfoEntity.area_img
+        println(img_path)
         self.area_img_ImageView.GET(AreaImgUrl + self.lxAreaInfoEntity.area_img, success:successGetImage, failure:failureGetImage)
         return true
     }
